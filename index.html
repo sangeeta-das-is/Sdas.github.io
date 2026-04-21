@@ -14,155 +14,222 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family: Arial, sans-serif;
-background:#f4f6f8;
-color:#222;
+font-family:Arial, sans-serif;
+background:#0d1117;
+color:white;
 line-height:1.6;
 }
 
-header{
-background:#0f2747;
+#languageModal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal-box{
+background:#161b22;
+padding:40px;
+border-radius:18px;
+text-align:center;
+width:90%;
+max-width:500px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.modal-box h2{
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.modal-box p{
+margin-bottom:25px;
+color:#cbd5e1;
+}
+
+.lang-btn{
+padding:14px 28px;
+margin:10px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
+background:#2563eb;
 color:white;
-padding:70px 20px;
+}
+
+.lang-btn:hover{
+background:#1d4ed8;
+}
+
+header{
+background:linear-gradient(135deg,#0f2747,#111827);
+padding:80px 20px;
 text-align:center;
 }
 
 header h1{
-font-size:42px;
-margin-bottom:10px;
+font-size:48px;
+margin-bottom:12px;
 }
 
 header p{
-font-size:20px;
-opacity:0.9;
+font-size:22px;
+color:#cbd5e1;
 }
 
 nav{
-background:white;
-padding:15px;
+background:#111827;
+padding:16px;
 text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
 }
 
 nav a{
-margin:0 15px;
+color:white;
 text-decoration:none;
-color:#0f2747;
+margin:0 15px;
 font-weight:bold;
+}
+
+nav a:hover{
+color:#60a5fa;
 }
 
 section{
 max-width:1000px;
 margin:auto;
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .card{
-background:white;
+background:#161b22;
 padding:30px;
-border-radius:14px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-margin-bottom:30px;
+border-radius:16px;
+margin-bottom:25px;
+box-shadow:0 0 12px rgba(0,0,0,0.3);
 }
 
 h2{
-color:#0f2747;
-margin-bottom:20px;
-font-size:28px;
-}
-
-ul{
-padding-left:20px;
+color:#60a5fa;
+margin-bottom:18px;
 }
 
 footer{
-background:#0f2747;
-color:white;
+background:#111827;
 text-align:center;
 padding:25px;
-margin-top:40px;
+color:#94a3b8;
+margin-top:30px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Sangeeta Kumari Das</h1>
-<p>Angehende Fachinformatikerin für Systemintegration</p>
-</header>
+<div id="languageModal">
+<div class="modal-box">
+<h2>Willkommen / Welcome</h2>
+<p>In welcher Sprache möchten Sie die Website ansehen?<br>
+Which language would you like to view the website in?</p>
+
+<button class="lang-btn" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+<button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+</div>
+</div>
 
 <nav>
-<a href="#about">Über mich</a>
-<a href="#skills">Kenntnisse</a>
-<a href="#experience">Erfahrung</a>
-<a href="#projects">Projekte</a>
-<a href="#learning">Aktuell</a>
-<a href="#contact">Kontakt</a>
+<a href="#about" data-de="Über mich" data-en="About">Über mich</a>
+<a href="#skills" data-de="Kenntnisse" data-en="Skills">Kenntnisse</a>
+<a href="#learning" data-de="Aktuell" data-en="Learning">Aktuell</a>
+<a href="#projects" data-de="Projekte" data-en="Projects">Projekte</a>
+<a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
 </nav>
+
+<header>
+<h1>Sangeeta Kumari Das</h1>
+<p id="title"
+data-de="Angehende Fachinformatikerin für Systemintegration"
+data-en="Aspiring IT Specialist in System Integration">
+Angehende Fachinformatikerin für Systemintegration
+</p>
+</header>
 
 <section id="about">
 <div class="card">
-<h2>Über mich</h2>
-<p>Motivierte Quereinsteigerin mit Berufserfahrung im Recruiting und Kundenkontakt. Aktuell in Umschulung zur Fachinformatikerin für Systemintegration mit großem Interesse an IT-Infrastruktur, Cloud-Technologien und Support.</p>
+<h2 data-de="Über mich" data-en="About Me">Über mich</h2>
+<p id="aboutText"
+data-de="Motivierte Quereinsteigerin mit Berufserfahrung im Recruiting und Kundenkontakt. Aktuell in Umschulung zur Fachinformatikerin für Systemintegration."
+data-en="Motivated career changer with professional experience in recruiting and customer interaction. Currently retraining as an IT Specialist in System Integration.">
+Motivierte Quereinsteigerin mit Berufserfahrung im Recruiting und Kundenkontakt.
+</p>
 </div>
 </section>
 
 <section id="skills">
 <div class="card">
-<h2>Technische Kenntnisse</h2>
-<ul>
-<li>AWS Grundlagen</li>
-<li>Windows Server</li>
-<li>Active Directory</li>
-<li>Microsoft 365</li>
-<li>Netzwerkgrundlagen</li>
-<li>IT-Support</li>
-</ul>
-</div>
-</section>
-
-<section id="experience">
-<div class="card">
-<h2>Berufserfahrung</h2>
-<p><strong>Sr. Executive</strong> – Datamatics Global Pvt Ltd</p>
-<p>HR-Systeme, Workday HCM, Kundenkommunikation</p>
-</div>
-</section>
-
-<section id="projects">
-<div class="card">
-<h2>Projekte</h2>
-<ul>
-<li>Windows Server Installation im Lab</li>
-<li>Active Directory Benutzerverwaltung</li>
-<li>AWS EC2 Setup</li>
-<li>Netzwerk- und IP-Konfiguration</li>
-</ul>
+<h2 data-de="Kenntnisse" data-en="Skills">Kenntnisse</h2>
+<p>Windows Server | Active Directory | Microsoft 365 | AWS | IT-Support</p>
 </div>
 </section>
 
 <section id="learning">
 <div class="card">
-<h2>Aktuell in Umschulung</h2>
-<p>Seit 01/2026 Umschulung zur Fachinformatikerin für Systemintegration bei BBQ Bildung und Berufliche Qualifizierung.</p>
+<h2 data-de="Derzeit vertiefe ich meine Kenntnisse in" data-en="Currently Expanding My Knowledge In">
+Derzeit vertiefe ich meine Kenntnisse in
+</h2>
+<p>PowerShell | Linux | Virtualisierung | IT-Sicherheit | Cloud-Technologien</p>
+</div>
+</section>
+
+<section id="projects">
+<div class="card">
+<h2 data-de="Projekte" data-en="Projects">Projekte</h2>
+<p data-de="Windows Server Lab, AWS EC2 Setup, Netzwerk-Konfiguration"
+data-en="Windows Server Lab, AWS EC2 Setup, Network Configuration">
+Windows Server Lab, AWS EC2 Setup, Netzwerk-Konfiguration
+</p>
 </div>
 </section>
 
 <section id="contact">
 <div class="card">
-<h2>Kontakt</h2>
-<p>E-Mail: deine@email.de</p>
-<p>LinkedIn: dein-link</p>
+<h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
+<p>Email: deine@email.de</p>
 <p>GitHub: github.com/deinname</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Sangeeta Kumari Das</p>
+© 2026 Sangeeta Kumari Das
 </footer>
+
+<script>
+function setLanguage(lang){
+document.getElementById("languageModal").style.display="none";
+
+document.querySelectorAll("[data-de]").forEach(el=>{
+el.innerHTML = el.getAttribute("data-" + lang);
+});
+
+localStorage.setItem("language",lang);
+}
+
+window.onload=function(){
+let savedLang = localStorage.getItem("language");
+if(savedLang){
+setLanguage(savedLang);
+}
+}
+</script>
 
 </body>
 </html>
