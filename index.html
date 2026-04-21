@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sangeeta Kumari Das | Portfolio</title>
+<title>Sangeeta Portfolio</title>
 
 <style>
 *{
@@ -15,46 +15,50 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial, sans-serif;
-background:#0d1117;
+background:#0b1120;
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
 
-#languageModal{
+/* Language Popup */
+#langModal{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.85);
+background:rgba(0,0,0,0.88);
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:999;
+z-index:9999;
 }
 
 .modal-box{
-background:#161b22;
+background:#111827;
 padding:40px;
-border-radius:18px;
+border-radius:20px;
 text-align:center;
 width:90%;
 max-width:500px;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+animation:fadeIn 1s ease;
 }
 
 .modal-box h2{
+font-size:30px;
 margin-bottom:15px;
 color:#60a5fa;
 }
 
 .modal-box p{
-margin-bottom:25px;
 color:#cbd5e1;
+margin-bottom:25px;
+line-height:1.7;
 }
 
 .lang-btn{
-padding:14px 28px;
+padding:14px 26px;
 margin:10px;
 border:none;
 border-radius:30px;
@@ -63,148 +67,320 @@ cursor:pointer;
 font-weight:bold;
 background:#2563eb;
 color:white;
+transition:0.3s;
 }
 
 .lang-btn:hover{
+transform:scale(1.05);
 background:#1d4ed8;
 }
 
-header{
-background:linear-gradient(135deg,#0f2747,#111827);
-padding:80px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:48px;
-margin-bottom:12px;
-}
-
-header p{
-font-size:22px;
-color:#cbd5e1;
-}
-
+/* Navigation */
 nav{
-background:#111827;
-padding:16px;
-text-align:center;
-position:sticky;
+position:fixed;
 top:0;
+width:100%;
+padding:22px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,15,30,0.88);
+backdrop-filter:blur(8px);
+z-index:1000;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
+.logo{
+font-size:28px;
 font-weight:bold;
-}
-
-nav a:hover{
 color:#60a5fa;
 }
 
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#60a5fa;
+}
+
+/* Hero */
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 70px 50px;
+gap:50px;
+flex-wrap:wrap;
+background:radial-gradient(circle at top,#14213d,#0b1120 60%);
+}
+
+.hero-text{
+max-width:650px;
+animation:slideLeft 1s ease;
+}
+
+.hero-text h1{
+font-size:64px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.hero-text span{
+color:#60a5fa;
+}
+
+.hero-text h2{
+font-size:28px;
+font-weight:400;
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+.hero-text p{
+font-size:19px;
+line-height:1.8;
+color:#d1d5db;
+margin-bottom:35px;
+}
+
+.buttons a{
+text-decoration:none;
+padding:15px 28px;
+border-radius:35px;
+margin-right:15px;
+font-weight:bold;
+display:inline-block;
+margin-top:10px;
+transition:0.3s;
+}
+
+.btn1{
+background:#2563eb;
+color:white;
+}
+
+.btn2{
+border:2px solid #2563eb;
+color:white;
+}
+
+.buttons a:hover{
+transform:translateY(-3px);
+}
+
+/* Image */
+.hero-img{
+animation:slideRight 1s ease;
+}
+
+.hero-img img{
+width:370px;
+height:370px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid #2563eb;
+box-shadow:0 0 25px rgba(37,99,235,0.35);
+}
+
+/* Sections */
 section{
-max-width:1000px;
+padding:80px 25px;
+max-width:1100px;
 margin:auto;
-padding:50px 20px;
 }
 
 .card{
-background:#161b22;
-padding:30px;
-border-radius:16px;
+background:#111827;
+padding:35px;
+border-radius:18px;
 margin-bottom:25px;
-box-shadow:0 0 12px rgba(0,0,0,0.3);
+box-shadow:0 0 15px rgba(0,0,0,0.25);
 }
 
-h2{
-color:#60a5fa;
+.card h3{
+font-size:30px;
 margin-bottom:18px;
+color:#60a5fa;
+}
+
+.card p{
+line-height:1.8;
+color:#d1d5db;
 }
 
 footer{
-background:#111827;
 text-align:center;
-padding:25px;
+padding:30px;
 color:#94a3b8;
-margin-top:30px;
+}
+
+/* Animations */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideLeft{
+from{opacity:0;transform:translateX(-50px);}
+to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes slideRight{
+from{opacity:0;transform:translateX(50px);}
+to{opacity:1;transform:translateX(0);}
+}
+
+/* Responsive */
+@media(max-width:950px){
+
+nav{
+padding:18px 20px;
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.hero{
+padding:150px 25px 50px;
+text-align:center;
+justify-content:center;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.hero-img img{
+width:280px;
+height:280px;
+}
+
+.buttons a{
+margin:10px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div id="languageModal">
+<!-- Language Popup -->
+<div id="langModal">
 <div class="modal-box">
 <h2>Willkommen / Welcome</h2>
-<p>In welcher Sprache möchten Sie die Website ansehen?<br>
-Which language would you like to view the website in?</p>
+<p>
+In welcher Sprache möchten Sie die Website ansehen?<br>
+Which language would you like to view the website in?
+</p>
 
-<button class="lang-btn" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
-<button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+<button class="lang-btn" onclick="setLang('de')">🇩🇪 Deutsch</button>
+<button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
 </div>
 </div>
 
+<!-- Navigation -->
 <nav>
-<a href="#about" data-de="Über mich" data-en="About">Über mich</a>
-<a href="#skills" data-de="Kenntnisse" data-en="Skills">Kenntnisse</a>
-<a href="#learning" data-de="Aktuell" data-en="Learning">Aktuell</a>
-<a href="#projects" data-de="Projekte" data-en="Projects">Projekte</a>
-<a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+<div class="logo">Sangeeta</div>
+<ul>
+<li><a href="#about">Über mich</a></li>
+<li><a href="#experience">Erfahrung</a></li>
+<li><a href="#skills">Kenntnisse</a></li>
+<li><a href="#projects">Projekte</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
 </nav>
 
-<header>
-<h1>Sangeeta Kumari Das</h1>
-<p id="title"
-data-de="Angehende Fachinformatikerin für Systemintegration"
-data-en="Aspiring IT Specialist in System Integration">
-Angehende Fachinformatikerin für Systemintegration
-</p>
-</header>
+<!-- Hero -->
+<div class="hero">
 
+<div class="hero-text">
+<h1>Hallo, ich bin <span>Sangeeta</span></h1>
+<h2>Angehende Fachinformatikerin für Systemintegration</h2>
+
+<p>
+Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur,
+Cloud-Technologien und technischem Support.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn1">Kontakt aufnehmen</a>
+<a href="#projects" class="btn2">Projekte ansehen</a>
+</div>
+</div>
+
+<div class="hero-img">
+<img src="deinfoto.jpg" alt="Sangeeta">
+</div>
+
+</div>
+
+<!-- About -->
 <section id="about">
 <div class="card">
-<h2 data-de="Über mich" data-en="About Me">Über mich</h2>
-<p id="aboutText"
-data-de="Motivierte Quereinsteigerin mit Berufserfahrung im Recruiting und Kundenkontakt. Aktuell in Umschulung zur Fachinformatikerin für Systemintegration."
-data-en="Motivated career changer with professional experience in recruiting and customer interaction. Currently retraining as an IT Specialist in System Integration.">
-Motivierte Quereinsteigerin mit Berufserfahrung im Recruiting und Kundenkontakt.
+<h3>Über mich</h3>
+<p>
+Ich befinde mich aktuell in der Umschulung zur Fachinformatikerin für
+Systemintegration und erweitere täglich meine Kenntnisse in Netzwerken,
+Windows Server, Active Directory und Cloud-Technologien.
 </p>
 </div>
 </section>
 
+<!-- Experience -->
+<section id="experience">
+<div class="card">
+<h3>Erfahrung</h3>
+<p>
+Mehrjährige Berufserfahrung im Recruiting, Kundenkontakt,
+HR-Systemen und Projektkoordination.
+</p>
+</div>
+</section>
+
+<!-- Skills -->
 <section id="skills">
 <div class="card">
-<h2 data-de="Kenntnisse" data-en="Skills">Kenntnisse</h2>
-<p>Windows Server | Active Directory | Microsoft 365 | AWS | IT-Support</p>
-</div>
-</section>
-
-<section id="learning">
-<div class="card">
-<h2 data-de="Derzeit vertiefe ich meine Kenntnisse in" data-en="Currently Expanding My Knowledge In">
-Derzeit vertiefe ich meine Kenntnisse in
-</h2>
-<p>PowerShell | Linux | Virtualisierung | IT-Sicherheit | Cloud-Technologien</p>
-</div>
-</section>
-
-<section id="projects">
-<div class="card">
-<h2 data-de="Projekte" data-en="Projects">Projekte</h2>
-<p data-de="Windows Server Lab, AWS EC2 Setup, Netzwerk-Konfiguration"
-data-en="Windows Server Lab, AWS EC2 Setup, Network Configuration">
-Windows Server Lab, AWS EC2 Setup, Netzwerk-Konfiguration
+<h3>Kenntnisse</h3>
+<p>
+Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk • IT-Support
 </p>
 </div>
 </section>
 
+<!-- Projects -->
+<section id="projects">
+<div class="card">
+<h3>Projekte</h3>
+<p>
+Windows Server Lab • AWS EC2 Setup • Netzwerk-Konfiguration • Benutzerverwaltung
+</p>
+</div>
+</section>
+
+<!-- Contact -->
 <section id="contact">
 <div class="card">
-<h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
-<p>Email: deine@email.de</p>
-<p>GitHub: github.com/deinname</p>
+<h3>Kontakt</h3>
+<p>
+E-Mail: deine@email.de<br>
+GitHub: github.com/deinname<br>
+LinkedIn: linkedin.com/in/deinprofil
+</p>
 </div>
 </section>
 
@@ -213,20 +389,14 @@ Windows Server Lab, AWS EC2 Setup, Netzwerk-Konfiguration
 </footer>
 
 <script>
-function setLanguage(lang){
-document.getElementById("languageModal").style.display="none";
-
-document.querySelectorAll("[data-de]").forEach(el=>{
-el.innerHTML = el.getAttribute("data-" + lang);
-});
-
-localStorage.setItem("language",lang);
+function setLang(lang){
+document.getElementById("langModal").style.display="none";
+localStorage.setItem("lang",lang);
 }
 
 window.onload=function(){
-let savedLang = localStorage.getItem("language");
-if(savedLang){
-setLanguage(savedLang);
+if(localStorage.getItem("lang")){
+document.getElementById("langModal").style.display="none";
 }
 }
 </script>
