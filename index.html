@@ -14,20 +14,20 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#000;
-color:white;
+color:#fff;
 overflow-x:hidden;
 }
 
-/* ALWAYS SHOW LANGUAGE POPUP */
+/* LANGUAGE POPUP */
 #languagePopup{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.94);
+background:rgba(0,0,0,.94);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -41,7 +41,6 @@ border-radius:18px;
 text-align:center;
 width:90%;
 max-width:520px;
-box-shadow:0 0 25px rgba(0,0,0,0.5);
 }
 
 .popup-box h2{
@@ -67,11 +66,6 @@ cursor:pointer;
 font-weight:bold;
 background:#2563eb;
 color:white;
-transition:0.3s;
-}
-
-.popup-box button:hover{
-transform:scale(1.05);
 }
 
 /* NAV */
@@ -84,7 +78,7 @@ padding:22px 55px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(20,20,20,0.6);
+background:rgba(20,20,20,.65);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
@@ -106,6 +100,11 @@ text-decoration:none;
 color:white;
 font-size:18px;
 font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#f59e0b;
 }
 
 /* HERO */
@@ -126,9 +125,9 @@ max-width:760px;
 
 .left h1{
 font-size:82px;
-color:#ddd6d3;
-margin-bottom:18px;
 line-height:1.05;
+margin-bottom:18px;
+color:#ddd6d3;
 }
 
 .left h2{
@@ -164,12 +163,6 @@ border:2px solid #f59e0b;
 color:white;
 }
 
-.right{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
 .photo-placeholder{
 width:520px;
 height:520px;
@@ -184,12 +177,44 @@ color:#aaa;
 padding:20px;
 }
 
+/* SECTIONS */
+section{
+padding:120px 50px 70px;
+}
+
+.box{
+max-width:1000px;
+margin:auto;
+background:#111;
+padding:40px;
+border-radius:18px;
+}
+
+.box h3{
+font-size:38px;
+margin-bottom:20px;
+color:#a855f7;
+}
+
+.box p{
+font-size:22px;
+line-height:1.8;
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:35px;
+color:#888;
+}
+
+/* MOBILE */
 @media(max-width:1100px){
 
 .hero{
 padding:140px 20px 50px;
-text-align:center;
 justify-content:center;
+text-align:center;
 }
 
 .left h1{font-size:54px;}
@@ -200,7 +225,6 @@ justify-content:center;
 width:280px;
 height:280px;
 font-size:18px;
-margin-top:25px;
 }
 
 nav{
@@ -222,9 +246,7 @@ justify-content:center;
 <!-- LANGUAGE POPUP -->
 <div id="languagePopup">
 <div class="popup-box">
-
 <h2>Willkommen / Welcome</h2>
-
 <p>
 In welcher Sprache möchten Sie die Website ansehen?<br>
 Which language would you like to view the website in?
@@ -232,7 +254,6 @@ Which language would you like to view the website in?
 
 <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
 <button onclick="setLanguage('en')">🇬🇧 English</button>
-
 </div>
 </div>
 
@@ -241,11 +262,11 @@ Which language would you like to view the website in?
 <div class="logo">Sangeeta</div>
 
 <ul>
-<li><a href="#" id="nav1">Über mich</a></li>
-<li><a href="#" id="nav2">Erfahrung</a></li>
-<li><a href="#" id="nav3">Kenntnisse</a></li>
-<li><a href="#" id="nav4">Projekte</a></li>
-<li><a href="#" id="nav5">Kontakt</a></li>
+<li><a href="#about" id="nav1">Über mich</a></li>
+<li><a href="#experience" id="nav2">Erfahrung</a></li>
+<li><a href="#skills" id="nav3">Kenntnisse</a></li>
+<li><a href="#projects" id="nav4">Projekte</a></li>
+<li><a href="#contact" id="nav5">Kontakt</a></li>
 </ul>
 </nav>
 
@@ -253,9 +274,7 @@ Which language would you like to view the website in?
 <section class="hero">
 
 <div class="left">
-
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
-
 <h2 id="title2">Angehende Fachinformatikerin für Systemintegration_</h2>
 
 <p id="desc">
@@ -264,10 +283,9 @@ Cloud-Technologien und technischem Support.
 </p>
 
 <div class="buttons">
-<a href="#" class="btn1" id="btn1">Kontakt aufnehmen</a>
-<a href="#" class="btn2" id="btn2">Projekte ansehen</a>
+<a href="#contact" class="btn1" id="btn1">Kontakt aufnehmen</a>
+<a href="#projects" class="btn2" id="btn2">Projekte ansehen</a>
 </div>
-
 </div>
 
 <div class="right">
@@ -278,48 +296,126 @@ Dein Foto<br>kommt hier später
 
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+<div class="box">
+<h3 id="aboutTitle">Über mich</h3>
+<p id="aboutText">
+Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.
+</p>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="box">
+<h3 id="expTitle">Erfahrung</h3>
+<p id="expText">
+Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="box">
+<h3 id="skillTitle">Kenntnisse</h3>
+<p id="skillText">
+Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk
+</p>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="box">
+<h3 id="projectTitle">Projekte</h3>
+<p id="projectText">
+Windows Server Lab • AWS Setup • Netzwerk-Konfiguration
+</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="box">
+<h3 id="contactTitle">Kontakt</h3>
+<p id="contactText">
+E-Mail: deine@email.de
+</p>
+</div>
+</section>
+
+<footer>© 2026 Sangeeta Kumari Das</footer>
+
 <script>
-/* IMPORTANT:
-NO localStorage
-NO cookies
-NO auto hide
-
-So popup appears EVERY time page opens
-*/
-
 function setLanguage(lang){
 
 document.getElementById("languagePopup").style.display="none";
 
 if(lang==="en"){
 
-document.getElementById("title1").innerHTML="Hi, I'm Sangeeta";
-document.getElementById("title2").innerHTML="Aspiring IT Specialist in System Integration_";
-document.getElementById("desc").innerHTML="Motivated career changer with strong interest in IT infrastructure, cloud technologies and technical support.";
-document.getElementById("btn1").innerHTML="Get In Touch";
-document.getElementById("btn2").innerHTML="View My Work";
-document.getElementById("photoText").innerHTML="Your Photo<br>Coming Soon";
+nav1.innerHTML="About";
+nav2.innerHTML="Experience";
+nav3.innerHTML="Skills";
+nav4.innerHTML="Projects";
+nav5.innerHTML="Contact";
 
-document.getElementById("nav1").innerHTML="About";
-document.getElementById("nav2").innerHTML="Experience";
-document.getElementById("nav3").innerHTML="Skills";
-document.getElementById("nav4").innerHTML="Projects";
-document.getElementById("nav5").innerHTML="Contact";
+title1.innerHTML="Hi, I'm Sangeeta";
+title2.innerHTML="Aspiring IT Specialist in System Integration_";
+desc.innerHTML="Motivated career changer with strong interest in IT infrastructure, cloud technologies and technical support.";
+
+btn1.innerHTML="Get In Touch";
+btn2.innerHTML="View My Work";
+
+photoText.innerHTML="Your Photo<br>Coming Soon";
+
+aboutTitle.innerHTML="About";
+aboutText.innerHTML="Currently retraining as an IT Specialist in System Integration.";
+
+expTitle.innerHTML="Experience";
+expText.innerHTML="Professional experience in recruiting, customer interaction and HR systems.";
+
+skillTitle.innerHTML="Skills";
+skillText.innerHTML="Windows Server • Active Directory • Microsoft 365 • AWS • Networking";
+
+projectTitle.innerHTML="Projects";
+projectText.innerHTML="Windows Server Lab • AWS Setup • Network Configuration";
+
+contactTitle.innerHTML="Contact";
+contactText.innerHTML="Email: your@email.com";
 
 }else{
 
-document.getElementById("title1").innerHTML="Hallo, ich bin Sangeeta";
-document.getElementById("title2").innerHTML="Angehende Fachinformatikerin für Systemintegration_";
-document.getElementById("desc").innerHTML="Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur, Cloud-Technologien und technischem Support.";
-document.getElementById("btn1").innerHTML="Kontakt aufnehmen";
-document.getElementById("btn2").innerHTML="Projekte ansehen";
-document.getElementById("photoText").innerHTML="Dein Foto<br>kommt hier später";
+nav1.innerHTML="Über mich";
+nav2.innerHTML="Erfahrung";
+nav3.innerHTML="Kenntnisse";
+nav4.innerHTML="Projekte";
+nav5.innerHTML="Kontakt";
 
-document.getElementById("nav1").innerHTML="Über mich";
-document.getElementById("nav2").innerHTML="Erfahrung";
-document.getElementById("nav3").innerHTML="Kenntnisse";
-document.getElementById("nav4").innerHTML="Projekte";
-document.getElementById("nav5").innerHTML="Kontakt";
+title1.innerHTML="Hallo, ich bin Sangeeta";
+title2.innerHTML="Angehende Fachinformatikerin für Systemintegration_";
+desc.innerHTML="Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur, Cloud-Technologien und technischem Support.";
+
+btn1.innerHTML="Kontakt aufnehmen";
+btn2.innerHTML="Projekte ansehen";
+
+photoText.innerHTML="Dein Foto<br>kommt hier später";
+
+aboutTitle.innerHTML="Über mich";
+aboutText.innerHTML="Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.";
+
+expTitle.innerHTML="Erfahrung";
+expText.innerHTML="Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.";
+
+skillTitle.innerHTML="Kenntnisse";
+skillText.innerHTML="Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk";
+
+projectTitle.innerHTML="Projekte";
+projectText.innerHTML="Windows Server Lab • AWS Setup • Netzwerk-Konfiguration";
+
+contactTitle.innerHTML="Kontakt";
+contactText.innerHTML="E-Mail: deine@email.de";
 }
 }
 </script>
