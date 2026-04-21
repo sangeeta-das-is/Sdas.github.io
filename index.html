@@ -20,18 +20,18 @@ color:white;
 overflow-x:hidden;
 }
 
-/* LANGUAGE POPUP */
+/* ALWAYS SHOW LANGUAGE POPUP */
 #languagePopup{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.92);
+background:rgba(0,0,0,0.94);
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:9999;
+z-index:99999;
 }
 
 .popup-box{
@@ -47,7 +47,7 @@ box-shadow:0 0 25px rgba(0,0,0,0.5);
 .popup-box h2{
 font-size:32px;
 margin-bottom:15px;
-color:#7c3aed;
+color:#a855f7;
 }
 
 .popup-box p{
@@ -74,7 +74,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* NAVIGATION */
+/* NAV */
 nav{
 position:fixed;
 top:0;
@@ -87,7 +87,6 @@ align-items:center;
 background:rgba(20,20,20,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
@@ -99,19 +98,14 @@ color:#a855f7;
 nav ul{
 display:flex;
 list-style:none;
-gap:32px;
+gap:30px;
 }
 
 nav ul li a{
 text-decoration:none;
 color:white;
-font-weight:600;
 font-size:18px;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#f59e0b;
+font-weight:600;
 }
 
 /* HERO */
@@ -123,8 +117,7 @@ align-items:center;
 padding:120px 70px 40px;
 gap:50px;
 flex-wrap:wrap;
-background:
-radial-gradient(circle at top center,#8a3b00 0%,#000 60%);
+background:radial-gradient(circle at top center,#8a3b00 0%,#000 60%);
 }
 
 .left{
@@ -133,35 +126,32 @@ max-width:760px;
 
 .left h1{
 font-size:82px;
+color:#ddd6d3;
+margin-bottom:18px;
 line-height:1.05;
-color:#d6d3d1;
-margin-bottom:20px;
 }
 
 .left h2{
 font-size:42px;
-margin-bottom:28px;
+margin-bottom:25px;
 font-family:monospace;
-font-weight:500;
 }
 
 .left p{
 font-size:24px;
 line-height:1.7;
 color:#ddd;
-max-width:850px;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .buttons a{
 display:inline-block;
+padding:18px 35px;
+border-radius:40px;
 text-decoration:none;
-padding:18px 38px;
-border-radius:45px;
 font-size:20px;
 font-weight:bold;
-margin-right:18px;
-transition:0.3s;
+margin-right:15px;
 }
 
 .btn1{
@@ -174,11 +164,6 @@ border:2px solid #f59e0b;
 color:white;
 }
 
-.buttons a:hover{
-transform:translateY(-4px);
-}
-
-/* PHOTO PLACEHOLDER */
 .right{
 display:flex;
 justify-content:center;
@@ -189,36 +174,27 @@ align-items:center;
 width:520px;
 height:520px;
 border-radius:50%;
-border:4px dashed #555;
+border:4px dashed #666;
 display:flex;
 justify-content:center;
 align-items:center;
+text-align:center;
 font-size:28px;
 color:#aaa;
-text-align:center;
-padding:30px;
+padding:20px;
 }
 
-/* MOBILE */
 @media(max-width:1100px){
 
 .hero{
-padding:140px 25px 50px;
-justify-content:center;
+padding:140px 20px 50px;
 text-align:center;
+justify-content:center;
 }
 
-.left h1{
-font-size:54px;
-}
-
-.left h2{
-font-size:28px;
-}
-
-.left p{
-font-size:20px;
-}
+.left h1{font-size:54px;}
+.left h2{font-size:28px;}
+.left p{font-size:20px;}
 
 .photo-placeholder{
 width:280px;
@@ -236,7 +212,6 @@ gap:15px;
 nav ul{
 flex-wrap:wrap;
 justify-content:center;
-gap:16px;
 }
 }
 </style>
@@ -247,7 +222,9 @@ gap:16px;
 <!-- LANGUAGE POPUP -->
 <div id="languagePopup">
 <div class="popup-box">
+
 <h2>Willkommen / Welcome</h2>
+
 <p>
 In welcher Sprache möchten Sie die Website ansehen?<br>
 Which language would you like to view the website in?
@@ -255,10 +232,11 @@ Which language would you like to view the website in?
 
 <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
 <button onclick="setLanguage('en')">🇬🇧 English</button>
+
 </div>
 </div>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
 <div class="logo">Sangeeta</div>
 
@@ -271,15 +249,14 @@ Which language would you like to view the website in?
 </ul>
 </nav>
 
-<!-- HOMEPAGE -->
+<!-- HERO -->
 <section class="hero">
 
 <div class="left">
+
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
 
-<h2 id="title2">
-Angehende Fachinformatikerin für Systemintegration_
-</h2>
+<h2 id="title2">Angehende Fachinformatikerin für Systemintegration_</h2>
 
 <p id="desc">
 Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur,
@@ -290,6 +267,7 @@ Cloud-Technologien und technischem Support.
 <a href="#" class="btn1" id="btn1">Kontakt aufnehmen</a>
 <a href="#" class="btn2" id="btn2">Projekte ansehen</a>
 </div>
+
 </div>
 
 <div class="right">
@@ -301,6 +279,14 @@ Dein Foto<br>kommt hier später
 </section>
 
 <script>
+/* IMPORTANT:
+NO localStorage
+NO cookies
+NO auto hide
+
+So popup appears EVERY time page opens
+*/
+
 function setLanguage(lang){
 
 document.getElementById("languagePopup").style.display="none";
@@ -320,8 +306,7 @@ document.getElementById("nav3").innerHTML="Skills";
 document.getElementById("nav4").innerHTML="Projects";
 document.getElementById("nav5").innerHTML="Contact";
 
-}
-else{
+}else{
 
 document.getElementById("title1").innerHTML="Hallo, ich bin Sangeeta";
 document.getElementById("title2").innerHTML="Angehende Fachinformatikerin für Systemintegration_";
