@@ -66,6 +66,11 @@ cursor:pointer;
 font-weight:bold;
 background:#2563eb;
 color:white;
+transition:.3s;
+}
+
+.popup-box button:hover{
+transform:scale(1.05);
 }
 
 /* NAV */
@@ -151,6 +156,11 @@ text-decoration:none;
 font-size:20px;
 font-weight:bold;
 margin-right:15px;
+transition:.3s;
+}
+
+.buttons a:hover{
+transform:translateY(-3px);
 }
 
 .btn1{
@@ -200,6 +210,16 @@ color:#a855f7;
 font-size:22px;
 line-height:1.8;
 color:#ddd;
+}
+
+.box a{
+color:#60a5fa;
+text-decoration:none;
+word-break:break-word;
+}
+
+.box a:hover{
+text-decoration:underline;
 }
 
 footer{
@@ -278,8 +298,7 @@ Which language would you like to view the website in?
 <h2 id="title2">Angehende Fachinformatikerin für Systemintegration_</h2>
 
 <p id="desc">
-Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur,
-Cloud-Technologien und technischem Support.
+Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur, Cloud-Technologien und technischem Support.
 </p>
 
 <div class="buttons">
@@ -363,6 +382,7 @@ nav5.innerHTML="Contact";
 
 title1.innerHTML="Hi, I'm Sangeeta";
 title2.innerHTML="Aspiring IT Specialist in System Integration_";
+
 desc.innerHTML="Motivated career changer with strong interest in IT infrastructure, cloud technologies and technical support.";
 
 btn1.innerHTML="Get In Touch";
@@ -371,7 +391,7 @@ btn2.innerHTML="View My Work";
 photoText.innerHTML="Your Photo<br>Coming Soon";
 
 aboutTitle.innerHTML="About";
-aboutText.innerHTML="Currently retraining as an IT Specialist in System Integration.";
+aboutText.innerHTML="Currently retraining as an IT Specialist in System Integration. I am a dedicated and reliable person who values honesty, hard work, and continuous self-development – both personally and technologically.";
 
 expTitle.innerHTML="Experience";
 expText.innerHTML="Professional experience in recruiting, customer interaction and HR systems.";
@@ -383,7 +403,12 @@ projectTitle.innerHTML="Projects";
 projectText.innerHTML="Windows Server Lab • AWS Setup • Network Configuration";
 
 contactTitle.innerHTML="Contact";
-contactText.innerHTML="Email: your@email.com";
+contactText.innerHTML="
+📞 <a href='tel:+4915236734519'>01523-673-4519</a><br><br>
+✉️ <a href='mailto:sangeeta-das@gmx.de'>sangeeta-das@gmx.de</a><br><br>
+📍 Haselstraße 31, Düsseldorf<br><br>
+🌐 <a href='https://sangeeta-das-is.github.io/Sdas.github.io/' target='_blank'>Open Portfolio</a>
+";
 
 }else{
 
@@ -395,6 +420,7 @@ nav5.innerHTML="Kontakt";
 
 title1.innerHTML="Hallo, ich bin Sangeeta";
 title2.innerHTML="Angehende Fachinformatikerin für Systemintegration_";
+
 desc.innerHTML="Motivierte Quereinsteigerin mit großem Interesse an IT-Infrastruktur, Cloud-Technologien und technischem Support.";
 
 btn1.innerHTML="Kontakt aufnehmen";
@@ -403,7 +429,7 @@ btn2.innerHTML="Projekte ansehen";
 photoText.innerHTML="Dein Foto<br>kommt hier später";
 
 aboutTitle.innerHTML="Über mich";
-aboutText.innerHTML="Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.";
+aboutText.innerHTML="Aktuell in Umschulung zur Fachinformatikerin für Systemintegration. Ich bin eine engagierte und zuverlässige Persönlichkeit, die großen Wert auf Ehrlichkeit, Fleiß und kontinuierliche Weiterentwicklung legt – sowohl persönlich als auch technologisch.";
 
 expTitle.innerHTML="Erfahrung";
 expText.innerHTML="Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.";
@@ -415,7 +441,12 @@ projectTitle.innerHTML="Projekte";
 projectText.innerHTML="Windows Server Lab • AWS Setup • Netzwerk-Konfiguration";
 
 contactTitle.innerHTML="Kontakt";
-contactText.innerHTML="E-Mail: deine@email.de";
+contactText.innerHTML="
+📞 <a href='tel:+4915236734519'>01523-673-4519</a><br><br>
+✉️ <a href='mailto:sangeeta-das@gmx.de'>sangeeta-das@gmx.de</a><br><br>
+📍 Haselstraße 31, Düsseldorf<br><br>
+🌐 <a href='https://sangeeta-das-is.github.io/Sdas.github.io/' target='_blank'>Portfolio öffnen</a>
+";
 }
 }
 </script>
