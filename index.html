@@ -68,7 +68,7 @@ background:#2563eb;
 color:white;
 }
 
-/* NAV CONTAINER BORDER LIKE SAMPLE */
+/* NAV */
 nav{
 position:fixed;
 top:16px;
@@ -78,7 +78,7 @@ padding:18px 35px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(17,24,39,.70);
+background:rgba(17,24,39,.72);
 backdrop-filter:blur(12px);
 border:1px solid rgba(148,163,184,.25);
 border-radius:24px;
@@ -349,13 +349,35 @@ Dein Foto<br>kommt hier später
 </div>
 </section>
 
-<section id="about"><div class="box"><h3 id="aboutTitle">Über mich</h3><p id="aboutText">Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.</p></div></section>
+<section id="about">
+<div class="box">
+<h3 id="aboutTitle">Über mich</h3>
+<p id="aboutText">
+Ich bringe mehr als 8 Jahre Erfahrung im HR-Bereich mit, besonders im Umgang mit Workday und internen Prozessen. Seit 2026 mache ich eine Umschulung zur Fachinformatikerin für Systemintegration. Ich bin motiviert, lernbereit und freue mich auf den Einstieg in die IT.
+</p>
+</div>
+</section>
 
-<section id="experience"><div class="box"><h3 id="expTitle">Erfahrung</h3><p id="expText">Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.</p></div></section>
+<section id="experience">
+<div class="box">
+<h3 id="expTitle">Erfahrung</h3>
+<p id="expText">Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.</p>
+</div>
+</section>
 
-<section id="skills"><div class="box"><h3 id="skillTitle">Kenntnisse</h3><p id="skillText">Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk</p></div></section>
+<section id="skills">
+<div class="box">
+<h3 id="skillTitle">Kenntnisse</h3>
+<p id="skillText">Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk</p>
+</div>
+</section>
 
-<section id="projects"><div class="box"><h3 id="projectTitle">Projekte</h3><p id="projectText">Windows Server Lab • AWS Setup • Netzwerk-Konfiguration</p></div></section>
+<section id="projects">
+<div class="box">
+<h3 id="projectTitle">Projekte</h3>
+<p id="projectText">Windows Server Lab • AWS Setup • Netzwerk-Konfiguration</p>
+</div>
+</section>
 
 <section id="contact">
 <div class="box">
@@ -371,6 +393,7 @@ function setLanguage(lang){
 document.getElementById("languagePopup").style.display="none";
 
 if(lang==="en"){
+
 nav1.innerHTML="About";
 nav2.innerHTML="Experience";
 nav3.innerHTML="Skills";
@@ -383,10 +406,11 @@ desc.innerHTML="Committed, reliable and motivated for continuous growth.";
 
 btn1.innerHTML="Get In Touch";
 btn2.innerHTML="View My Work";
+
 photoText.innerHTML="Your Photo<br>Coming Soon";
 
 aboutTitle.innerHTML="About";
-aboutText.innerHTML="Currently retraining as an IT Specialist in System Integration.";
+aboutText.innerHTML="I bring more than 8 years of experience in HR, especially with Workday and internal processes. Since 2026, I have been retraining as an IT Specialist in System Integration. I am motivated, eager to learn and looking forward to starting my career in IT.";
 
 expTitle.innerHTML="Experience";
 expText.innerHTML="Professional experience in recruiting, customer interaction and HR systems.";
@@ -406,6 +430,7 @@ contactText.innerHTML=`
 `;
 
 }else{
+
 nav1.innerHTML="Über mich";
 nav2.innerHTML="Erfahrung";
 nav3.innerHTML="Kenntnisse";
@@ -418,10 +443,11 @@ desc.innerHTML="Engagiert, zuverlässig und motiviert zur kontinuierlichen Weite
 
 btn1.innerHTML="Kontakt aufnehmen";
 btn2.innerHTML="Projekte ansehen";
+
 photoText.innerHTML="Dein Foto<br>kommt hier später";
 
 aboutTitle.innerHTML="Über mich";
-aboutText.innerHTML="Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.";
+aboutText.innerHTML="Ich bringe mehr als 8 Jahre Erfahrung im HR-Bereich mit, besonders im Umgang mit Workday und internen Prozessen. Seit 2026 mache ich eine Umschulung zur Fachinformatikerin für Systemintegration. Ich bin motiviert, lernbereit und freue mich auf den Einstieg in die IT.";
 
 expTitle.innerHTML="Erfahrung";
 expText.innerHTML="Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.";
