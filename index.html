@@ -68,18 +68,20 @@ background:#2563eb;
 color:white;
 }
 
-/* NAV */
+/* NAV CONTAINER BORDER LIKE SAMPLE */
 nav{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 55px;
+top:16px;
+left:18px;
+right:18px;
+padding:18px 35px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(17,24,39,.82);
-backdrop-filter:blur(10px);
+background:rgba(17,24,39,.70);
+backdrop-filter:blur(12px);
+border:1px solid rgba(148,163,184,.25);
+border-radius:24px;
 z-index:1000;
 }
 
@@ -112,7 +114,7 @@ min-height:100vh;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:130px 70px 40px;
+padding:150px 70px 40px;
 gap:50px;
 flex-wrap:wrap;
 background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
@@ -129,7 +131,6 @@ margin-bottom:16px;
 font-weight:700;
 letter-spacing:-1px;
 white-space:nowrap;
-color:#ffffff;
 }
 
 .left h2{
@@ -245,8 +246,23 @@ color:#94a3b8;
 /* MOBILE */
 @media(max-width:1100px){
 
+nav{
+left:10px;
+right:10px;
+top:10px;
+padding:16px;
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:16px;
+}
+
 .hero{
-padding:140px 20px 50px;
+padding:170px 20px 50px;
 justify-content:center;
 text-align:center;
 }
@@ -275,17 +291,6 @@ margin-bottom:10px;
 width:250px;
 height:250px;
 font-size:18px;
-}
-
-nav{
-flex-direction:column;
-padding:18px;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
 }
 
 .box h3{
@@ -326,7 +331,6 @@ Which language would you like to view the website in?
 </nav>
 
 <section class="hero">
-
 <div class="left">
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
 <h2 id="title2">Angehende Fachinformatikerin für Systemintegration_</h2>
@@ -343,36 +347,15 @@ Which language would you like to view the website in?
 Dein Foto<br>kommt hier später
 </div>
 </div>
-
 </section>
 
-<section id="about">
-<div class="box">
-<h3 id="aboutTitle">Über mich</h3>
-<p id="aboutText">Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.</p>
-</div>
-</section>
+<section id="about"><div class="box"><h3 id="aboutTitle">Über mich</h3><p id="aboutText">Aktuell in Umschulung zur Fachinformatikerin für Systemintegration.</p></div></section>
 
-<section id="experience">
-<div class="box">
-<h3 id="expTitle">Erfahrung</h3>
-<p id="expText">Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.</p>
-</div>
-</section>
+<section id="experience"><div class="box"><h3 id="expTitle">Erfahrung</h3><p id="expText">Berufserfahrung im Recruiting, Kundenkontakt und HR-Systemen.</p></div></section>
 
-<section id="skills">
-<div class="box">
-<h3 id="skillTitle">Kenntnisse</h3>
-<p id="skillText">Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk</p>
-</div>
-</section>
+<section id="skills"><div class="box"><h3 id="skillTitle">Kenntnisse</h3><p id="skillText">Windows Server • Active Directory • Microsoft 365 • AWS • Netzwerk</p></div></section>
 
-<section id="projects">
-<div class="box">
-<h3 id="projectTitle">Projekte</h3>
-<p id="projectText">Windows Server Lab • AWS Setup • Netzwerk-Konfiguration</p>
-</div>
-</section>
+<section id="projects"><div class="box"><h3 id="projectTitle">Projekte</h3><p id="projectText">Windows Server Lab • AWS Setup • Netzwerk-Konfiguration</p></div></section>
 
 <section id="contact">
 <div class="box">
@@ -388,7 +371,6 @@ function setLanguage(lang){
 document.getElementById("languagePopup").style.display="none";
 
 if(lang==="en"){
-
 nav1.innerHTML="About";
 nav2.innerHTML="Experience";
 nav3.innerHTML="Skills";
@@ -401,7 +383,6 @@ desc.innerHTML="Committed, reliable and motivated for continuous growth.";
 
 btn1.innerHTML="Get In Touch";
 btn2.innerHTML="View My Work";
-
 photoText.innerHTML="Your Photo<br>Coming Soon";
 
 aboutTitle.innerHTML="About";
@@ -425,7 +406,6 @@ contactText.innerHTML=`
 `;
 
 }else{
-
 nav1.innerHTML="Über mich";
 nav2.innerHTML="Erfahrung";
 nav3.innerHTML="Kenntnisse";
@@ -438,7 +418,6 @@ desc.innerHTML="Engagiert, zuverlässig und motiviert zur kontinuierlichen Weite
 
 btn1.innerHTML="Kontakt aufnehmen";
 btn2.innerHTML="Projekte ansehen";
-
 photoText.innerHTML="Dein Foto<br>kommt hier später";
 
 aboutTitle.innerHTML="Über mich";
