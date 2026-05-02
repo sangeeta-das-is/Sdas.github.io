@@ -48,6 +48,16 @@ background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
 .left h2{font-size:28px;margin-bottom:20px;font-family:monospace;color:#93c5fd;}
 .left p{font-size:20px;line-height:1.7;color:#d1d5db;margin-bottom:32px;}
 
+.cursor{
+display:inline-block;
+animation:blink 0.8s infinite;
+}
+
+@keyframes blink{
+0%,50%{opacity:1;}
+51%,100%{opacity:0;}
+}
+
 .buttons a{
 display:inline-block;padding:15px 30px;border-radius:40px;text-decoration:none;
 font-size:18px;font-weight:600;margin-right:14px;
@@ -55,10 +65,13 @@ font-size:18px;font-weight:600;margin-right:14px;
 .btn1{border:2px solid #2563eb;color:white;}
 .btn2{border:2px solid #2563eb;color:white;}
 
-.photo-placeholder{
-width:360px;height:360px;border-radius:50%;border:3px solid #334155;
-display:flex;justify-content:center;align-items:center;text-align:center;
-font-size:22px;color:#94a3b8;
+.profile-photo{
+width:360px;
+height:360px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #2563eb;
+box-shadow:0 0 35px rgba(37,99,235,.45);
 }
 
 /* SECTION */
@@ -232,10 +245,9 @@ white-space:normal;
 
 .left h2{font-size:24px;}
 
-.photo-placeholder{
+.profile-photo{
 width:230px;
 height:230px;
-font-size:18px;
 }
 
 .skills-grid,.hobby-list{
@@ -283,7 +295,7 @@ Which language would you like to view the website in?
 <section class="hero">
 <div class="left">
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
-<h2 id="title2">Angehende Fachinformatikerin für Systemintegration_</h2>
+<h2 id="title2">Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span></h2>
 <p id="desc">Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.</p>
 
 <div class="buttons">
@@ -293,9 +305,7 @@ Which language would you like to view the website in?
 </div>
 
 <div class="right">
-<div class="photo-placeholder" id="photoText">
-Dein Foto<br>kommt hier später
-</div>
+<img src="profile.jpg" alt="Sangeeta Profile Photo" class="profile-photo">
 </div>
 </section>
 
@@ -423,13 +433,11 @@ nav4.innerHTML="Hobbies";
 nav5.innerHTML="Contact";
 
 title1.innerHTML="Hi, I'm Sangeeta";
-title2.innerHTML="Aspiring IT Specialist in System Integration_";
+title2.innerHTML='Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
 desc.innerHTML="Committed, reliable and motivated for continuous growth.";
 
 btn1.innerHTML="Get In Touch";
 btn2.innerHTML="View Projects";
-
-photoText.innerHTML="Your Photo<br>Coming Soon";
 
 aboutTitle.innerHTML="About";
 aboutText.innerHTML="Currently retraining as an IT Specialist in System Integration at BBQ Düsseldorf. In addition, I bring more than 8 years of HR experience, especially in process optimization and Workday. I now aim to apply my experience in the IT field.";
@@ -462,13 +470,11 @@ nav4.innerHTML="Hobbys";
 nav5.innerHTML="Kontakt";
 
 title1.innerHTML="Hallo, ich bin Sangeeta";
-title2.innerHTML="Angehende Fachinformatikerin für Systemintegration_";
+title2.innerHTML='Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
 desc.innerHTML="Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.";
 
 btn1.innerHTML="Kontakt aufnehmen";
 btn2.innerHTML="Projekte ansehen";
-
-photoText.innerHTML="Dein Foto<br>kommt hier später";
 
 aboutTitle.innerHTML="Über mich";
 aboutText.innerHTML="Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für Systemintegration bei BBQ Düsseldorf. Darüber hinaus bringe ich mehr als 8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung und Workday. Nun möchte ich meine Erfahrung gezielt im IT-Bereich einbringen.";
