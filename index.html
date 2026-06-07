@@ -33,12 +33,7 @@ z-index:1000;
 }
 
 .logo{font-size:26px;font-weight:700;color:#93c5fd}
-
-.nav-right{
-display:flex;
-align-items:center;
-gap:24px;
-}
+.nav-right{display:flex;align-items:center;gap:24px}
 
 nav ul{
 display:flex;
@@ -188,6 +183,20 @@ color:#93c5fd;
 font-size:17px;
 line-height:1.8;
 color:#d1d5db;
+}
+
+.qualification{
+margin-top:22px;
+padding:18px 20px;
+background:#0f172a;
+border-left:4px solid #2563eb;
+border-radius:8px;
+color:#d1d5db;
+line-height:1.7;
+}
+
+.qualification strong{
+color:#93c5fd;
 }
 
 /* SKILLS */
@@ -399,6 +408,7 @@ color:#94a3b8;
 
 /* TABLET */
 @media(max-width:1100px){
+
 nav{
 flex-direction:column;
 gap:14px;
@@ -436,11 +446,14 @@ width:190px;
 height:190px;
 }
 
-.project-card{grid-template-columns:1fr 1fr}
+.project-card{
+grid-template-columns:1fr 1fr;
+}
 }
 
 /* MOBILE */
 @media(max-width:700px){
+
 nav{
 position:relative;
 top:0;
@@ -513,6 +526,7 @@ overflow-wrap:anywhere;
 
 <section class="hero">
 <div class="left">
+
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
 
 <h2 id="title2">
@@ -528,6 +542,7 @@ Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.
 <a href="#contact" id="btn1">Kontakt aufnehmen</a>
 <a href="#projects" id="btn2">Projekte ansehen</a>
 </div>
+
 </div>
 
 <div class="right">
@@ -537,6 +552,7 @@ Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.
 
 <section id="about">
 <div class="box">
+
 <h3 id="aboutTitle">Über mich</h3>
 
 <p id="aboutText">
@@ -546,11 +562,19 @@ Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als
 Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern.
 Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.
 </p>
+
+<div class="qualification" id="qualification">
+<strong>Höchster Bildungsabschluss:</strong><br>
+Bachelor of Technology (B.Tech) in Computer Science<br>
+Biju Patnaik University of Technology (BPUT), Indien · 2006–2010
+</div>
+
 </div>
 </section>
 
 <section id="skills">
 <div class="box">
+
 <h3 id="skillTitle">Kenntnisse</h3>
 
 <div class="skills-grid">
@@ -591,6 +615,7 @@ Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.
 
 <section id="projects">
 <div class="box">
+
 <h3 id="projectTitle">Projekte</h3>
 
 <p class="project-intro" id="projectIntro">
@@ -601,10 +626,9 @@ Cloud-Bereitstellung aufzubauen.
 
 <div class="project-grid">
 
-<!-- CISCO PORT SECURITY -->
-
 <div class="project-card">
 <div>
+
 <h4 id="p1t">🔌 Cisco Switchport Port-Security</h4>
 
 <div class="tools" id="p1tools">
@@ -625,6 +649,7 @@ Cloud-Bereitstellung aufzubauen.
 Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und
 erfolgreich getestet.
 </div>
+
 </div>
 
 <div class="diagram">
@@ -632,11 +657,7 @@ erfolgreich getestet.
 
 <div class="node" id="p1node1">💻 Autorisiertes Gerät</div>
 <div class="arrow">⬇</div>
-
-<div class="highlight-node" id="p1node2">
-🔌 Cisco Switch mit Port-Security
-</div>
-
+<div class="highlight-node" id="p1node2">🔌 Cisco Switch mit Port-Security</div>
 <div class="arrow">⬇</div>
 <div class="blocked-node" id="p1node3">⛔ Unautorisiertes Gerät blockiert</div>
 
@@ -654,10 +675,9 @@ GitHub-Dokumentation ansehen
 </div>
 </div>
 
-<!-- EMPLOYEE SERVICE -->
-
 <div class="project-card">
 <div>
+
 <h4 id="p2t">☁️ Employee Service REST API</h4>
 
 <div class="tools" id="p2tools">
@@ -680,6 +700,7 @@ GitHub-Dokumentation ansehen
 Ergebnis: Eine containerisierte REST API wurde erfolgreich entwickelt,
 auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.
 </div>
+
 </div>
 
 <div class="diagram">
@@ -687,11 +708,7 @@ auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.
 
 <div class="node" id="p2node1">🌐 API-Anfrage</div>
 <div class="arrow">⬇</div>
-
-<div class="highlight-node" id="p2node2">
-🐍 Python Flask REST API
-</div>
-
+<div class="highlight-node" id="p2node2">🐍 Python Flask REST API</div>
 <div class="arrow">⬇</div>
 <div class="node" id="p2node3">🗄️ PostgreSQL 17</div>
 
@@ -715,6 +732,7 @@ GitHub-Dokumentation ansehen
 
 <section id="hobbies">
 <div class="box">
+
 <h3 id="hobbyTitle">Hobbys</h3>
 
 <div class="hobby-list">
@@ -723,11 +741,13 @@ GitHub-Dokumentation ansehen
 <div class="hobby-item" id="h3">💃 Klassischer Tanz</div>
 <div class="hobby-item" id="h4">🍲 Internationale Rezepte lernen</div>
 </div>
+
 </div>
 </section>
 
 <section id="contact">
 <div class="box">
+
 <h3 id="contactTitle">Kontakt</h3>
 
 <div class="contact-item">
@@ -753,6 +773,7 @@ rel="noopener noreferrer">
 LinkedIn
 </a>
 </div>
+
 </div>
 </section>
 
@@ -777,9 +798,7 @@ nav4.innerHTML="Hobbies";
 nav5.innerHTML="Contact";
 
 title1.innerHTML="Hi, I'm Sangeeta";
-
-title2.innerHTML=
-'Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
+title2.innerHTML='Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
 
 desc.innerHTML=
 "Focused on system integration, networking, cloud basics and IT support. "+
@@ -796,8 +815,12 @@ aboutText.innerHTML=
 "in process optimization, Workday and structured collaboration with different "+
 "stakeholders. I now want to apply this experience in the IT field.";
 
-skillTitle.innerHTML="Skills";
+qualification.innerHTML=
+"<strong>Highest qualification:</strong><br>"+
+"Bachelor of Technology (B.Tech) in Computer Science<br>"+
+"Biju Patnaik University of Technology (BPUT), India · 2006–2010";
 
+skillTitle.innerHTML="Skills";
 projectTitle.innerHTML="Projects";
 
 projectIntro.innerHTML=
@@ -805,22 +828,9 @@ projectIntro.innerHTML=
 "experience in network security, programming, containerization and cloud deployment.";
 
 p1t.innerHTML="🔌 Cisco Switchport Port Security";
-
-p1tools.innerHTML=
-"<span>Cisco Packet Tracer</span>"+
-"<span>Switchport</span>"+
-"<span>Port Security</span>"+
-"<span>MAC Addresses</span>";
-
-p1d.innerHTML=
-"• Port security configured on Cisco access ports<br>"+
-"• Allowed MAC addresses assigned to specific devices<br>"+
-"• Maximum number of connected devices restricted<br>"+
-"• Unauthorized devices blocked using shutdown mode";
-
-p1r.innerHTML=
-"Result: Network access was restricted to authorized devices and successfully tested.";
-
+p1tools.innerHTML="<span>Cisco Packet Tracer</span><span>Switchport</span><span>Port Security</span><span>MAC Addresses</span>";
+p1d.innerHTML="• Port security configured on Cisco access ports<br>• Allowed MAC addresses assigned to specific devices<br>• Maximum number of connected devices restricted<br>• Unauthorized devices blocked using shutdown mode";
+p1r.innerHTML="Result: Network access was restricted to authorized devices and successfully tested.";
 p1diagramTitle.innerHTML="📄 Project Overview";
 p1node1.innerHTML="💻 Authorized Device";
 p1node2.innerHTML="🔌 Cisco Switch with Port Security";
@@ -829,25 +839,9 @@ p1note.innerHTML="Access control using secure MAC addresses";
 p1link.innerHTML="View GitHub Documentation";
 
 p2t.innerHTML="☁️ Employee Service REST API";
-
-p2tools.innerHTML=
-"<span>Python Flask</span>"+
-"<span>PostgreSQL 17</span>"+
-"<span>Docker Compose</span>"+
-"<span>AWS EC2</span>"+
-"<span>Ubuntu</span>"+
-"<span>SSH</span>";
-
-p2d.innerHTML=
-"• REST API developed with Python Flask to provide employee data<br>"+
-"• PostgreSQL database connected to the application<br>"+
-"• Application and database containerized using Docker Compose<br>"+
-"• Complete application deployed on an AWS EC2 instance";
-
-p2r.innerHTML=
-"Result: A containerized REST API was successfully developed, deployed on AWS EC2 "+
-"and made accessible through an API endpoint.";
-
+p2tools.innerHTML="<span>Python Flask</span><span>PostgreSQL 17</span><span>Docker Compose</span><span>AWS EC2</span><span>Ubuntu</span><span>SSH</span>";
+p2d.innerHTML="• REST API developed with Python Flask to provide employee data<br>• PostgreSQL database connected to the application<br>• Application and database containerized using Docker Compose<br>• Complete application deployed on an AWS EC2 instance";
+p2r.innerHTML="Result: A containerized REST API was successfully developed, deployed on AWS EC2 and made accessible through an API endpoint.";
 p2diagramTitle.innerHTML="📄 Project Overview";
 p2node1.innerHTML="🌐 API Request";
 p2node2.innerHTML="🐍 Python Flask REST API";
@@ -860,7 +854,6 @@ h1.innerHTML="📈 Personal Development";
 h2.innerHTML="📚 Reading Books";
 h3.innerHTML="💃 Classical Dance";
 h4.innerHTML="🍲 Learning International Recipes";
-
 contactTitle.innerHTML="Contact";
 
 }else{
@@ -876,9 +869,7 @@ nav4.innerHTML="Hobbys";
 nav5.innerHTML="Kontakt";
 
 title1.innerHTML="Hallo, ich bin Sangeeta";
-
-title2.innerHTML=
-'Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
+title2.innerHTML='Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
 
 desc.innerHTML=
 "Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. "+
@@ -896,8 +887,12 @@ aboutText.innerHTML=
 "Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. "+
 "Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.";
 
-skillTitle.innerHTML="Kenntnisse";
+qualification.innerHTML=
+"<strong>Höchster Bildungsabschluss:</strong><br>"+
+"Bachelor of Technology (B.Tech) in Computer Science<br>"+
+"Biju Patnaik University of Technology (BPUT), Indien · 2006–2010";
 
+skillTitle.innerHTML="Kenntnisse";
 projectTitle.innerHTML="Projekte";
 
 projectIntro.innerHTML=
@@ -906,22 +901,9 @@ projectIntro.innerHTML=
 "Cloud-Bereitstellung aufzubauen.";
 
 p1t.innerHTML="🔌 Cisco Switchport Port-Security";
-
-p1tools.innerHTML=
-"<span>Cisco Packet Tracer</span>"+
-"<span>Switchport</span>"+
-"<span>Port-Security</span>"+
-"<span>MAC-Adressen</span>";
-
-p1d.innerHTML=
-"• Port-Security auf Cisco Access-Ports konfiguriert<br>"+
-"• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>"+
-"• Maximale Anzahl verbundener Geräte eingeschränkt<br>"+
-"• Unautorisierte Geräte durch den Shutdown-Modus blockiert";
-
-p1r.innerHTML=
-"Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und erfolgreich getestet.";
-
+p1tools.innerHTML="<span>Cisco Packet Tracer</span><span>Switchport</span><span>Port-Security</span><span>MAC-Adressen</span>";
+p1d.innerHTML="• Port-Security auf Cisco Access-Ports konfiguriert<br>• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>• Maximale Anzahl verbundener Geräte eingeschränkt<br>• Unautorisierte Geräte durch den Shutdown-Modus blockiert";
+p1r.innerHTML="Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und erfolgreich getestet.";
 p1diagramTitle.innerHTML="📄 Projektübersicht";
 p1node1.innerHTML="💻 Autorisiertes Gerät";
 p1node2.innerHTML="🔌 Cisco Switch mit Port-Security";
@@ -930,25 +912,9 @@ p1note.innerHTML="Zugriffskontrolle über sichere MAC-Adressen";
 p1link.innerHTML="GitHub-Dokumentation ansehen";
 
 p2t.innerHTML="☁️ Employee Service REST API";
-
-p2tools.innerHTML=
-"<span>Python Flask</span>"+
-"<span>PostgreSQL 17</span>"+
-"<span>Docker Compose</span>"+
-"<span>AWS EC2</span>"+
-"<span>Ubuntu</span>"+
-"<span>SSH</span>";
-
-p2d.innerHTML=
-"• REST API zur Bereitstellung von Mitarbeiterdaten mit Python Flask entwickelt<br>"+
-"• PostgreSQL-Datenbank mit der Anwendung verbunden<br>"+
-"• Anwendung und Datenbank mit Docker Compose containerisiert<br>"+
-"• Vollständige Anwendung auf einer AWS-EC2-Instanz bereitgestellt";
-
-p2r.innerHTML=
-"Ergebnis: Eine containerisierte REST API wurde erfolgreich entwickelt, "+
-"auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.";
-
+p2tools.innerHTML="<span>Python Flask</span><span>PostgreSQL 17</span><span>Docker Compose</span><span>AWS EC2</span><span>Ubuntu</span><span>SSH</span>";
+p2d.innerHTML="• REST API zur Bereitstellung von Mitarbeiterdaten mit Python Flask entwickelt<br>• PostgreSQL-Datenbank mit der Anwendung verbunden<br>• Anwendung und Datenbank mit Docker Compose containerisiert<br>• Vollständige Anwendung auf einer AWS-EC2-Instanz bereitgestellt";
+p2r.innerHTML="Ergebnis: Eine containerisierte REST API wurde erfolgreich entwickelt, auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.";
 p2diagramTitle.innerHTML="📄 Projektübersicht";
 p2node1.innerHTML="🌐 API-Anfrage";
 p2node2.innerHTML="🐍 Python Flask REST API";
@@ -961,7 +927,6 @@ h1.innerHTML="📈 Persönliche Weiterentwicklung";
 h2.innerHTML="📚 Bücher lesen";
 h3.innerHTML="💃 Klassischer Tanz";
 h4.innerHTML="🍲 Internationale Rezepte lernen";
-
 contactTitle.innerHTML="Kontakt";
 }
 }
