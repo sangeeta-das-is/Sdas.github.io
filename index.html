@@ -6,12 +6,7 @@
 <title>Sangeeta Portfolio</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 
 body{
 font-family:Arial,sans-serif;
@@ -21,7 +16,6 @@ overflow-x:hidden;
 }
 
 /* NAVIGATION */
-
 nav{
 position:fixed;
 top:16px;
@@ -38,11 +32,7 @@ border-radius:22px;
 z-index:1000;
 }
 
-.logo{
-font-size:26px;
-font-weight:700;
-color:#93c5fd;
-}
+.logo{font-size:26px;font-weight:700;color:#93c5fd}
 
 .nav-right{
 display:flex;
@@ -57,16 +47,14 @@ gap:24px;
 flex-wrap:wrap;
 }
 
-nav ul li a{
+nav a{
 text-decoration:none;
 color:white;
 font-size:16px;
 font-weight:600;
 }
 
-nav ul li a:hover{
-color:#93c5fd;
-}
+nav a:hover{color:#93c5fd}
 
 .lang-switch{
 display:flex;
@@ -93,7 +81,6 @@ color:white;
 }
 
 /* HERO */
-
 .hero{
 min-height:100vh;
 display:flex;
@@ -104,10 +91,7 @@ gap:42px;
 background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
 }
 
-.left{
-max-width:720px;
-flex:1;
-}
+.left{max-width:720px;flex:1}
 
 .left h1{
 font-size:54px;
@@ -135,8 +119,8 @@ animation:blink .8s infinite;
 }
 
 @keyframes blink{
-0%,50%{opacity:1;}
-51%,100%{opacity:0;}
+0%,50%{opacity:1}
+51%,100%{opacity:0}
 }
 
 .buttons a{
@@ -152,9 +136,7 @@ border:2px solid #2563eb;
 color:white;
 }
 
-.buttons a:hover{
-background:#2563eb;
-}
+.buttons a:hover{background:#2563eb}
 
 .right{
 display:flex;
@@ -172,11 +154,8 @@ border:4px solid #2563eb;
 box-shadow:0 0 35px rgba(37,99,235,.45);
 }
 
-/* GENERAL SECTIONS */
-
-section{
-padding:90px 40px 55px;
-}
+/* SECTIONS */
+section{padding:90px 40px 55px}
 
 .box{
 max-width:1150px;
@@ -212,7 +191,6 @@ color:#d1d5db;
 }
 
 /* SKILLS */
-
 .skills-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -238,13 +216,7 @@ line-height:1.8;
 }
 
 /* PROJECTS */
-
-.project-intro{
-margin-bottom:28px;
-color:#cbd5e1;
-font-size:17px;
-line-height:1.8;
-}
+.project-intro{margin-bottom:28px}
 
 .project-grid{
 display:flex;
@@ -297,8 +269,6 @@ line-height:1.6;
 color:#bfdbfe;
 }
 
-/* PROJECT DIAGRAM */
-
 .diagram{
 background:#111827;
 padding:22px;
@@ -317,8 +287,7 @@ color:#93c5fd;
 margin-bottom:4px;
 }
 
-.node{
-background:#1e293b;
+.node,.highlight-node,.blocked-node{
 padding:11px 16px;
 border-radius:12px;
 width:100%;
@@ -326,23 +295,12 @@ text-align:center;
 font-weight:700;
 }
 
-.highlight-node{
-background:#2563eb;
-padding:11px 16px;
-border-radius:12px;
-width:100%;
-text-align:center;
-font-weight:700;
-}
+.node{background:#1e293b}
+.highlight-node{background:#2563eb}
 
 .blocked-node{
 background:#7f1d1d;
 border:1px solid #ef4444;
-padding:11px 16px;
-border-radius:12px;
-width:100%;
-text-align:center;
-font-weight:700;
 }
 
 .arrow{
@@ -352,6 +310,7 @@ color:#93c5fd;
 
 .small-note{
 font-size:14px;
+line-height:1.6;
 color:#cbd5e1;
 text-align:center;
 }
@@ -376,7 +335,6 @@ border-color:#60a5fa;
 }
 
 /* HOBBIES */
-
 .hobby-list{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -394,7 +352,6 @@ color:#d1d5db;
 }
 
 /* CONTACT */
-
 .contact-item{
 display:flex;
 align-items:center;
@@ -402,7 +359,6 @@ gap:12px;
 margin-bottom:15px;
 font-size:18px;
 color:#d1d5db;
-min-width:0;
 }
 
 .contact-item a{
@@ -442,9 +398,7 @@ color:#94a3b8;
 }
 
 /* TABLET */
-
 @media(max-width:1100px){
-
 nav{
 flex-direction:column;
 gap:14px;
@@ -467,37 +421,26 @@ justify-content:center;
 gap:24px;
 }
 
-.left{
-max-width:60%;
-}
+.left{max-width:60%}
 
 .left h1{
 font-size:36px;
 white-space:normal;
 }
 
-.left h2{
-font-size:21px;
-}
-
-.left p{
-font-size:17px;
-}
+.left h2{font-size:21px}
+.left p{font-size:17px}
 
 .profile-photo{
 width:190px;
 height:190px;
 }
 
-.project-card{
-grid-template-columns:1fr 1fr;
-}
+.project-card{grid-template-columns:1fr 1fr}
 }
 
 /* MOBILE */
-
 @media(max-width:700px){
-
 nav{
 position:relative;
 top:0;
@@ -518,43 +461,25 @@ flex-wrap:wrap;
 text-align:center;
 }
 
-.left{
-max-width:100%;
-}
-
-.left h1{
-font-size:34px;
-}
-
-.left h2{
-font-size:20px;
-}
-
-.left p{
-font-size:16px;
-}
+.left{max-width:100%}
+.left h1{font-size:34px}
+.left h2{font-size:20px}
+.left p{font-size:16px}
 
 .profile-photo{
 width:210px;
 height:210px;
 }
 
-section{
-padding:70px 18px 40px;
-}
-
-.box{
-padding:28px 20px;
-}
+section{padding:70px 18px 40px}
+.box{padding:28px 20px}
 
 .project-card{
 grid-template-columns:1fr;
 padding:18px;
 }
 
-.contact-item{
-font-size:16px;
-}
+.contact-item{font-size:16px}
 
 .contact-item a{
 font-size:16px;
@@ -588,7 +513,6 @@ overflow-wrap:anywhere;
 
 <section class="hero">
 <div class="left">
-
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
 
 <h2 id="title2">
@@ -604,7 +528,6 @@ Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.
 <a href="#contact" id="btn1">Kontakt aufnehmen</a>
 <a href="#projects" id="btn2">Projekte ansehen</a>
 </div>
-
 </div>
 
 <div class="right">
@@ -614,7 +537,6 @@ Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.
 
 <section id="about">
 <div class="box">
-
 <h3 id="aboutTitle">Über mich</h3>
 
 <p id="aboutText">
@@ -624,75 +546,43 @@ Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als
 Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern.
 Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.
 </p>
-
 </div>
 </section>
 
 <section id="skills">
 <div class="box">
-
 <h3 id="skillTitle">Kenntnisse</h3>
 
 <div class="skills-grid">
 
 <div class="skill-card">
 <h4>💻 Systemintegration</h4>
-<p>
-Windows Server<br>
-Active Directory<br>
-Benutzerverwaltung<br>
-IT Support
-</p>
+<p>Windows Server<br>Active Directory<br>Benutzerverwaltung<br>IT Support</p>
 </div>
 
 <div class="skill-card">
 <h4>🌐 Netzwerk</h4>
-<p>
-TCP/IP<br>
-DNS<br>
-DHCP<br>
-Switchport Security
-</p>
+<p>TCP/IP<br>DNS<br>DHCP<br>Switchport Security</p>
 </div>
 
 <div class="skill-card">
-<h4>☁️ Cloud & Microsoft</h4>
-<p>
-Microsoft 365<br>
-Azure Basics<br>
-AWS Basics<br>
-Exchange Online
-</p>
+<h4>☁️ Cloud & Deployment</h4>
+<p>AWS EC2<br>Docker<br>Docker Compose<br>Ubuntu & SSH</p>
 </div>
 
 <div class="skill-card">
 <h4>⌨️ Scripting & Programmierung</h4>
-<p>
-Java<br>
-PowerShell<br>
-REST API<br>
-GitHub
-</p>
+<p>Python Flask<br>Java<br>PowerShell<br>REST API</p>
 </div>
 
 <div class="skill-card">
 <h4>🗄️ Datenbanken</h4>
-<p>
-MariaDB<br>
-MySQL<br>
-Datenbank-Grundlagen<br>
-CRUD-Operationen
-</p>
+<p>PostgreSQL<br>MariaDB<br>MySQL<br>CRUD-Operationen</p>
 </div>
 
 <div class="skill-card">
 <h4>🧑‍💼 Business & HR</h4>
-<p>
-Workday<br>
-Prozessoptimierung<br>
-Reporting<br>
-Stakeholder Management
-</p>
+<p>Workday<br>Prozessoptimierung<br>Reporting<br>Stakeholder Management</p>
 </div>
 
 </div>
@@ -701,20 +591,19 @@ Stakeholder Management
 
 <section id="projects">
 <div class="box">
-
 <h3 id="projectTitle">Projekte</h3>
 
 <p class="project-intro" id="projectIntro">
 Diese Projekte habe ich eigenständig umgesetzt und dokumentiert, um praktische
-Erfahrung in Netzwerksicherheit, Programmierung und Systemintegration aufzubauen.
+Erfahrung in Netzwerksicherheit, Programmierung, Containerisierung und
+Cloud-Bereitstellung aufzubauen.
 </p>
 
 <div class="project-grid">
 
-<!-- CISCO PROJECT -->
+<!-- CISCO PORT SECURITY -->
 
 <div class="project-card">
-
 <div>
 <h4 id="p1t">🔌 Cisco Switchport Port-Security</h4>
 
@@ -742,7 +631,6 @@ erfolgreich getestet.
 <h5 id="p1diagramTitle">📄 Projektübersicht</h5>
 
 <div class="node" id="p1node1">💻 Autorisiertes Gerät</div>
-
 <div class="arrow">⬇</div>
 
 <div class="highlight-node" id="p1node2">
@@ -750,17 +638,13 @@ erfolgreich getestet.
 </div>
 
 <div class="arrow">⬇</div>
-
-<div class="blocked-node" id="p1node3">
-⛔ Unautorisiertes Gerät blockiert
-</div>
+<div class="blocked-node" id="p1node3">⛔ Unautorisiertes Gerät blockiert</div>
 
 <div class="small-note" id="p1note">
 Zugriffskontrolle über sichere MAC-Adressen
 </div>
 
-<a
-href="https://github.com/sangeeta-das-is/Cisco-port-security"
+<a href="https://github.com/sangeeta-das-is/Cisco-port-security"
 target="_blank"
 rel="noopener noreferrer"
 class="doc-button"
@@ -768,59 +652,54 @@ id="p1link">
 GitHub-Dokumentation ansehen
 </a>
 </div>
-
 </div>
 
-<!-- EMPLOYEE SERVICE PROJECT -->
+<!-- EMPLOYEE SERVICE -->
 
 <div class="project-card">
-
 <div>
-<h4 id="p2t">👩‍💼 Employee Service</h4>
+<h4 id="p2t">☁️ Employee Service REST API</h4>
 
 <div class="tools" id="p2tools">
-<span>Java</span>
-<span>REST API</span>
-<span>CRUD</span>
-<span>GitHub</span>
+<span>Python Flask</span>
+<span>PostgreSQL 17</span>
+<span>Docker Compose</span>
+<span>AWS EC2</span>
+<span>Ubuntu</span>
+<span>SSH</span>
 </div>
 
 <p id="p2d">
-• Employee Service zur Verwaltung von Mitarbeiterdaten erstellt<br>
-• Funktionen zum Erstellen, Anzeigen, Aktualisieren und Löschen umgesetzt<br>
-• Anwendung klar strukturiert und auf GitHub dokumentiert<br>
-• Service-Funktionen getestet
+• REST API zur Bereitstellung von Mitarbeiterdaten mit Python Flask entwickelt<br>
+• PostgreSQL-Datenbank mit der Anwendung verbunden<br>
+• Anwendung und Datenbank mit Docker Compose containerisiert<br>
+• Vollständige Anwendung auf einer AWS-EC2-Instanz bereitgestellt
 </p>
 
 <div class="result" id="p2r">
-Ergebnis: Ein strukturierter Service zur zuverlässigen Verwaltung von
-Mitarbeiterdaten wurde umgesetzt.
+Ergebnis: Eine containerisierte REST API wurde erfolgreich entwickelt,
+auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.
 </div>
 </div>
 
 <div class="diagram">
 <h5 id="p2diagramTitle">📄 Projektübersicht</h5>
 
-<div class="node" id="p2node1">💻 Benutzer / Anwendung</div>
-
+<div class="node" id="p2node1">🌐 API-Anfrage</div>
 <div class="arrow">⬇</div>
 
 <div class="highlight-node" id="p2node2">
-⚙️ Employee Service
+🐍 Python Flask REST API
 </div>
 
 <div class="arrow">⬇</div>
-
-<div class="node" id="p2node3">
-🗄️ Mitarbeiterdaten
-</div>
+<div class="node" id="p2node3">🗄️ PostgreSQL 17</div>
 
 <div class="small-note" id="p2note">
-Erstellen · Anzeigen · Aktualisieren · Löschen
+Docker Compose auf Ubuntu · Bereitstellung über AWS EC2
 </div>
 
-<a
-href="https://github.com/sangeeta-das-is/employee-service"
+<a href="https://github.com/sangeeta-das-is/employee-service"
 target="_blank"
 rel="noopener noreferrer"
 class="doc-button"
@@ -828,7 +707,6 @@ id="p2link">
 GitHub-Dokumentation ansehen
 </a>
 </div>
-
 </div>
 
 </div>
@@ -837,7 +715,6 @@ GitHub-Dokumentation ansehen
 
 <section id="hobbies">
 <div class="box">
-
 <h3 id="hobbyTitle">Hobbys</h3>
 
 <div class="hobby-list">
@@ -846,13 +723,11 @@ GitHub-Dokumentation ansehen
 <div class="hobby-item" id="h3">💃 Klassischer Tanz</div>
 <div class="hobby-item" id="h4">🍲 Internationale Rezepte lernen</div>
 </div>
-
 </div>
 </section>
 
 <section id="contact">
 <div class="box">
-
 <h3 id="contactTitle">Kontakt</h3>
 
 <div class="contact-item">
@@ -872,14 +747,12 @@ Düsseldorf
 
 <div class="contact-item">
 <span class="icon linkedin-icon">in</span>
-<a
-href="https://www.linkedin.com/in/sangeetadas2204/"
+<a href="https://www.linkedin.com/in/sangeetadas2204/"
 target="_blank"
 rel="noopener noreferrer">
 LinkedIn
 </a>
 </div>
-
 </div>
 </section>
 
@@ -888,202 +761,208 @@ LinkedIn
 <script>
 function setLanguage(lang){
 
-const deBtn = document.getElementById("deBtn");
-const enBtn = document.getElementById("enBtn");
+const deBtn=document.getElementById("deBtn");
+const enBtn=document.getElementById("enBtn");
 
-if(lang === "en"){
+if(lang==="en"){
 
-document.documentElement.lang = "en";
-
+document.documentElement.lang="en";
 deBtn.classList.remove("active");
 enBtn.classList.add("active");
 
-nav1.innerHTML = "About";
-nav2.innerHTML = "Skills";
-nav3.innerHTML = "Projects";
-nav4.innerHTML = "Hobbies";
-nav5.innerHTML = "Contact";
+nav1.innerHTML="About";
+nav2.innerHTML="Skills";
+nav3.innerHTML="Projects";
+nav4.innerHTML="Hobbies";
+nav5.innerHTML="Contact";
 
-title1.innerHTML = "Hi, I'm Sangeeta";
-title2.innerHTML =
+title1.innerHTML="Hi, I'm Sangeeta";
+
+title2.innerHTML=
 'Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
 
-desc.innerHTML =
-"Focused on system integration, networking, cloud basics and IT support. " +
+desc.innerHTML=
+"Focused on system integration, networking, cloud basics and IT support. "+
 "Committed, reliable and motivated for continuous growth.";
 
-btn1.innerHTML = "Get In Touch";
-btn2.innerHTML = "View Projects";
+btn1.innerHTML="Get In Touch";
+btn2.innerHTML="View Projects";
 
-aboutTitle.innerHTML = "About";
+aboutTitle.innerHTML="About";
 
-aboutText.innerHTML =
-"I am currently retraining as an IT Specialist in System Integration at " +
-"BBQ Düsseldorf. I also bring more than 8 years of HR experience, especially " +
-"in process optimization, Workday and structured collaboration with different " +
+aboutText.innerHTML=
+"I am currently retraining as an IT Specialist in System Integration at "+
+"BBQ Düsseldorf. I also bring more than 8 years of HR experience, especially "+
+"in process optimization, Workday and structured collaboration with different "+
 "stakeholders. I now want to apply this experience in the IT field.";
 
-skillTitle.innerHTML = "Skills";
+skillTitle.innerHTML="Skills";
 
-projectTitle.innerHTML = "Projects";
+projectTitle.innerHTML="Projects";
 
-projectIntro.innerHTML =
-"I independently implemented and documented these projects to build practical " +
-"experience in network security, programming and system integration.";
+projectIntro.innerHTML=
+"I independently implemented and documented these projects to build practical "+
+"experience in network security, programming, containerization and cloud deployment.";
 
-p1t.innerHTML = "🔌 Cisco Switchport Port Security";
+p1t.innerHTML="🔌 Cisco Switchport Port Security";
 
-p1tools.innerHTML =
-"<span>Cisco Packet Tracer</span>" +
-"<span>Switchport</span>" +
-"<span>Port Security</span>" +
+p1tools.innerHTML=
+"<span>Cisco Packet Tracer</span>"+
+"<span>Switchport</span>"+
+"<span>Port Security</span>"+
 "<span>MAC Addresses</span>";
 
-p1d.innerHTML =
-"• Port security configured on Cisco access ports<br>" +
-"• Allowed MAC addresses assigned to specific devices<br>" +
-"• Maximum number of connected devices restricted<br>" +
+p1d.innerHTML=
+"• Port security configured on Cisco access ports<br>"+
+"• Allowed MAC addresses assigned to specific devices<br>"+
+"• Maximum number of connected devices restricted<br>"+
 "• Unauthorized devices blocked using shutdown mode";
 
-p1r.innerHTML =
+p1r.innerHTML=
 "Result: Network access was restricted to authorized devices and successfully tested.";
 
-p1diagramTitle.innerHTML = "📄 Project Overview";
-p1node1.innerHTML = "💻 Authorized Device";
-p1node2.innerHTML = "🔌 Cisco Switch with Port Security";
-p1node3.innerHTML = "⛔ Unauthorized Device Blocked";
-p1note.innerHTML = "Access control using secure MAC addresses";
-p1link.innerHTML = "View GitHub Documentation";
+p1diagramTitle.innerHTML="📄 Project Overview";
+p1node1.innerHTML="💻 Authorized Device";
+p1node2.innerHTML="🔌 Cisco Switch with Port Security";
+p1node3.innerHTML="⛔ Unauthorized Device Blocked";
+p1note.innerHTML="Access control using secure MAC addresses";
+p1link.innerHTML="View GitHub Documentation";
 
-p2t.innerHTML = "👩‍💼 Employee Service";
+p2t.innerHTML="☁️ Employee Service REST API";
 
-p2tools.innerHTML =
-"<span>Java</span>" +
-"<span>REST API</span>" +
-"<span>CRUD</span>" +
-"<span>GitHub</span>";
+p2tools.innerHTML=
+"<span>Python Flask</span>"+
+"<span>PostgreSQL 17</span>"+
+"<span>Docker Compose</span>"+
+"<span>AWS EC2</span>"+
+"<span>Ubuntu</span>"+
+"<span>SSH</span>";
 
-p2d.innerHTML =
-"• Employee service created to manage employee data<br>" +
-"• Create, view, update and delete functions implemented<br>" +
-"• Application clearly structured and documented on GitHub<br>" +
-"• Service functions tested";
+p2d.innerHTML=
+"• REST API developed with Python Flask to provide employee data<br>"+
+"• PostgreSQL database connected to the application<br>"+
+"• Application and database containerized using Docker Compose<br>"+
+"• Complete application deployed on an AWS EC2 instance";
 
-p2r.innerHTML =
-"Result: A structured service for reliably managing employee data was implemented.";
+p2r.innerHTML=
+"Result: A containerized REST API was successfully developed, deployed on AWS EC2 "+
+"and made accessible through an API endpoint.";
 
-p2diagramTitle.innerHTML = "📄 Project Overview";
-p2node1.innerHTML = "💻 User / Application";
-p2node2.innerHTML = "⚙️ Employee Service";
-p2node3.innerHTML = "🗄️ Employee Data";
-p2note.innerHTML = "Create · View · Update · Delete";
-p2link.innerHTML = "View GitHub Documentation";
+p2diagramTitle.innerHTML="📄 Project Overview";
+p2node1.innerHTML="🌐 API Request";
+p2node2.innerHTML="🐍 Python Flask REST API";
+p2node3.innerHTML="🗄️ PostgreSQL 17";
+p2note.innerHTML="Docker Compose on Ubuntu · Deployed using AWS EC2";
+p2link.innerHTML="View GitHub Documentation";
 
-hobbyTitle.innerHTML = "Hobbies";
-h1.innerHTML = "📈 Personal Development";
-h2.innerHTML = "📚 Reading Books";
-h3.innerHTML = "💃 Classical Dance";
-h4.innerHTML = "🍲 Learning International Recipes";
+hobbyTitle.innerHTML="Hobbies";
+h1.innerHTML="📈 Personal Development";
+h2.innerHTML="📚 Reading Books";
+h3.innerHTML="💃 Classical Dance";
+h4.innerHTML="🍲 Learning International Recipes";
 
-contactTitle.innerHTML = "Contact";
+contactTitle.innerHTML="Contact";
 
 }else{
 
-document.documentElement.lang = "de";
-
+document.documentElement.lang="de";
 deBtn.classList.add("active");
 enBtn.classList.remove("active");
 
-nav1.innerHTML = "Über mich";
-nav2.innerHTML = "Kenntnisse";
-nav3.innerHTML = "Projekte";
-nav4.innerHTML = "Hobbys";
-nav5.innerHTML = "Kontakt";
+nav1.innerHTML="Über mich";
+nav2.innerHTML="Kenntnisse";
+nav3.innerHTML="Projekte";
+nav4.innerHTML="Hobbys";
+nav5.innerHTML="Kontakt";
 
-title1.innerHTML = "Hallo, ich bin Sangeeta";
+title1.innerHTML="Hallo, ich bin Sangeeta";
 
-title2.innerHTML =
+title2.innerHTML=
 'Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
 
-desc.innerHTML =
-"Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. " +
+desc.innerHTML=
+"Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. "+
 "Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.";
 
-btn1.innerHTML = "Kontakt aufnehmen";
-btn2.innerHTML = "Projekte ansehen";
+btn1.innerHTML="Kontakt aufnehmen";
+btn2.innerHTML="Projekte ansehen";
 
-aboutTitle.innerHTML = "Über mich";
+aboutTitle.innerHTML="Über mich";
 
-aboutText.innerHTML =
-"Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für " +
-"Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als " +
-"8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung, " +
-"Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. " +
+aboutText.innerHTML=
+"Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für "+
+"Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als "+
+"8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung, "+
+"Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. "+
 "Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.";
 
-skillTitle.innerHTML = "Kenntnisse";
+skillTitle.innerHTML="Kenntnisse";
 
-projectTitle.innerHTML = "Projekte";
+projectTitle.innerHTML="Projekte";
 
-projectIntro.innerHTML =
-"Diese Projekte habe ich eigenständig umgesetzt und dokumentiert, um praktische " +
-"Erfahrung in Netzwerksicherheit, Programmierung und Systemintegration aufzubauen.";
+projectIntro.innerHTML=
+"Diese Projekte habe ich eigenständig umgesetzt und dokumentiert, um praktische "+
+"Erfahrung in Netzwerksicherheit, Programmierung, Containerisierung und "+
+"Cloud-Bereitstellung aufzubauen.";
 
-p1t.innerHTML = "🔌 Cisco Switchport Port-Security";
+p1t.innerHTML="🔌 Cisco Switchport Port-Security";
 
-p1tools.innerHTML =
-"<span>Cisco Packet Tracer</span>" +
-"<span>Switchport</span>" +
-"<span>Port-Security</span>" +
+p1tools.innerHTML=
+"<span>Cisco Packet Tracer</span>"+
+"<span>Switchport</span>"+
+"<span>Port-Security</span>"+
 "<span>MAC-Adressen</span>";
 
-p1d.innerHTML =
-"• Port-Security auf Cisco Access-Ports konfiguriert<br>" +
-"• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>" +
-"• Maximale Anzahl verbundener Geräte eingeschränkt<br>" +
+p1d.innerHTML=
+"• Port-Security auf Cisco Access-Ports konfiguriert<br>"+
+"• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>"+
+"• Maximale Anzahl verbundener Geräte eingeschränkt<br>"+
 "• Unautorisierte Geräte durch den Shutdown-Modus blockiert";
 
-p1r.innerHTML =
+p1r.innerHTML=
 "Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und erfolgreich getestet.";
 
-p1diagramTitle.innerHTML = "📄 Projektübersicht";
-p1node1.innerHTML = "💻 Autorisiertes Gerät";
-p1node2.innerHTML = "🔌 Cisco Switch mit Port-Security";
-p1node3.innerHTML = "⛔ Unautorisiertes Gerät blockiert";
-p1note.innerHTML = "Zugriffskontrolle über sichere MAC-Adressen";
-p1link.innerHTML = "GitHub-Dokumentation ansehen";
+p1diagramTitle.innerHTML="📄 Projektübersicht";
+p1node1.innerHTML="💻 Autorisiertes Gerät";
+p1node2.innerHTML="🔌 Cisco Switch mit Port-Security";
+p1node3.innerHTML="⛔ Unautorisiertes Gerät blockiert";
+p1note.innerHTML="Zugriffskontrolle über sichere MAC-Adressen";
+p1link.innerHTML="GitHub-Dokumentation ansehen";
 
-p2t.innerHTML = "👩‍💼 Employee Service";
+p2t.innerHTML="☁️ Employee Service REST API";
 
-p2tools.innerHTML =
-"<span>Java</span>" +
-"<span>REST API</span>" +
-"<span>CRUD</span>" +
-"<span>GitHub</span>";
+p2tools.innerHTML=
+"<span>Python Flask</span>"+
+"<span>PostgreSQL 17</span>"+
+"<span>Docker Compose</span>"+
+"<span>AWS EC2</span>"+
+"<span>Ubuntu</span>"+
+"<span>SSH</span>";
 
-p2d.innerHTML =
-"• Employee Service zur Verwaltung von Mitarbeiterdaten erstellt<br>" +
-"• Funktionen zum Erstellen, Anzeigen, Aktualisieren und Löschen umgesetzt<br>" +
-"• Anwendung klar strukturiert und auf GitHub dokumentiert<br>" +
-"• Service-Funktionen getestet";
+p2d.innerHTML=
+"• REST API zur Bereitstellung von Mitarbeiterdaten mit Python Flask entwickelt<br>"+
+"• PostgreSQL-Datenbank mit der Anwendung verbunden<br>"+
+"• Anwendung und Datenbank mit Docker Compose containerisiert<br>"+
+"• Vollständige Anwendung auf einer AWS-EC2-Instanz bereitgestellt";
 
-p2r.innerHTML =
-"Ergebnis: Ein strukturierter Service zur zuverlässigen Verwaltung von Mitarbeiterdaten wurde umgesetzt.";
+p2r.innerHTML=
+"Ergebnis: Eine containerisierte REST API wurde erfolgreich entwickelt, "+
+"auf AWS EC2 bereitgestellt und über einen API-Endpunkt erreichbar gemacht.";
 
-p2diagramTitle.innerHTML = "📄 Projektübersicht";
-p2node1.innerHTML = "💻 Benutzer / Anwendung";
-p2node2.innerHTML = "⚙️ Employee Service";
-p2node3.innerHTML = "🗄️ Mitarbeiterdaten";
-p2note.innerHTML = "Erstellen · Anzeigen · Aktualisieren · Löschen";
-p2link.innerHTML = "GitHub-Dokumentation ansehen";
+p2diagramTitle.innerHTML="📄 Projektübersicht";
+p2node1.innerHTML="🌐 API-Anfrage";
+p2node2.innerHTML="🐍 Python Flask REST API";
+p2node3.innerHTML="🗄️ PostgreSQL 17";
+p2note.innerHTML="Docker Compose auf Ubuntu · Bereitstellung über AWS EC2";
+p2link.innerHTML="GitHub-Dokumentation ansehen";
 
-hobbyTitle.innerHTML = "Hobbys";
-h1.innerHTML = "📈 Persönliche Weiterentwicklung";
-h2.innerHTML = "📚 Bücher lesen";
-h3.innerHTML = "💃 Klassischer Tanz";
-h4.innerHTML = "🍲 Internationale Rezepte lernen";
+hobbyTitle.innerHTML="Hobbys";
+h1.innerHTML="📈 Persönliche Weiterentwicklung";
+h2.innerHTML="📚 Bücher lesen";
+h3.innerHTML="💃 Klassischer Tanz";
+h4.innerHTML="🍲 Internationale Rezepte lernen";
 
-contactTitle.innerHTML = "Kontakt";
+contactTitle.innerHTML="Kontakt";
 }
 }
 </script>
