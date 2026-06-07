@@ -6,21 +6,67 @@
 <title>Sangeeta Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:Arial,sans-serif;background:#0f172a;color:#fff;overflow-x:hidden;}
-
-/* NAV */
-nav{
-position:fixed;top:16px;left:18px;right:18px;
-padding:16px 28px;display:flex;justify-content:space-between;align-items:center;
-background:rgba(17,24,39,.78);backdrop-filter:blur(12px);
-border:1px solid rgba(148,163,184,.25);border-radius:22px;z-index:1000;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
-.logo{font-size:26px;font-weight:700;color:#93c5fd;}
-.nav-right{display:flex;align-items:center;gap:24px;}
-nav ul{display:flex;list-style:none;gap:24px;flex-wrap:wrap;}
-nav ul li a{text-decoration:none;color:white;font-size:16px;font-weight:600;}
-nav ul li a:hover{color:#93c5fd;}
+
+body{
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:16px;
+left:18px;
+right:18px;
+padding:16px 28px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(17,24,39,.82);
+backdrop-filter:blur(12px);
+border:1px solid rgba(148,163,184,.25);
+border-radius:22px;
+z-index:1000;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#93c5fd;
+}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:24px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:24px;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+font-weight:600;
+}
+
+nav ul li a:hover{
+color:#93c5fd;
+}
 
 .lang-switch{
 display:flex;
@@ -30,6 +76,7 @@ border:1px solid rgba(147,197,253,.25);
 border-radius:999px;
 padding:5px;
 }
+
 .lang-switch button{
 border:none;
 background:transparent;
@@ -39,12 +86,14 @@ padding:7px 12px;
 border-radius:999px;
 cursor:pointer;
 }
+
 .lang-switch button.active{
 background:#2563eb;
 color:white;
 }
 
 /* HERO */
+
 .hero{
 min-height:100vh;
 display:flex;
@@ -55,15 +104,36 @@ gap:42px;
 background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
 }
 
-.left{max-width:720px;flex:1;}
-.left h1{font-size:54px;margin-bottom:16px;white-space:nowrap;}
-.left h2{font-size:27px;margin-bottom:18px;font-family:monospace;color:#93c5fd;}
-.left p{font-size:19px;line-height:1.7;color:#d1d5db;margin-bottom:30px;}
+.left{
+max-width:720px;
+flex:1;
+}
+
+.left h1{
+font-size:54px;
+margin-bottom:16px;
+white-space:nowrap;
+}
+
+.left h2{
+font-size:27px;
+margin-bottom:18px;
+font-family:monospace;
+color:#93c5fd;
+}
+
+.left p{
+font-size:19px;
+line-height:1.7;
+color:#d1d5db;
+margin-bottom:30px;
+}
 
 .cursor{
 display:inline-block;
-animation:blink 0.8s infinite;
+animation:blink .8s infinite;
 }
+
 @keyframes blink{
 0%,50%{opacity:1;}
 51%,100%{opacity:0;}
@@ -81,6 +151,7 @@ margin-bottom:10px;
 border:2px solid #2563eb;
 color:white;
 }
+
 .buttons a:hover{
 background:#2563eb;
 }
@@ -91,6 +162,7 @@ justify-content:center;
 align-items:center;
 flex-shrink:0;
 }
+
 .profile-photo{
 width:320px;
 height:320px;
@@ -100,8 +172,11 @@ border:4px solid #2563eb;
 box-shadow:0 0 35px rgba(37,99,235,.45);
 }
 
-/* SECTION */
-section{padding:90px 40px 55px;}
+/* GENERAL SECTIONS */
+
+section{
+padding:90px 40px 55px;
+}
 
 .box{
 max-width:1150px;
@@ -124,10 +199,20 @@ background:linear-gradient(90deg,#2563eb,#93c5fd);
 border-radius:20px 20px 0 0;
 }
 
-.box h3{font-size:30px;margin-bottom:22px;color:#93c5fd;}
-.box p{font-size:17px;line-height:1.8;color:#d1d5db;}
+.box h3{
+font-size:30px;
+margin-bottom:22px;
+color:#93c5fd;
+}
+
+.box p{
+font-size:17px;
+line-height:1.8;
+color:#d1d5db;
+}
 
 /* SKILLS */
+
 .skills-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -153,6 +238,7 @@ line-height:1.8;
 }
 
 /* PROJECTS */
+
 .project-intro{
 margin-bottom:28px;
 color:#cbd5e1;
@@ -205,10 +291,13 @@ border-radius:999px;
 }
 
 .result{
-margin-top:12px;
+margin-top:14px;
 font-size:15px;
+line-height:1.6;
 color:#bfdbfe;
 }
+
+/* PROJECT DIAGRAM */
 
 .diagram{
 background:#111827;
@@ -218,41 +307,76 @@ border:1px solid rgba(147,197,253,.15);
 display:flex;
 flex-direction:column;
 align-items:center;
+justify-content:center;
 gap:12px;
+}
+
+.diagram h5{
+font-size:19px;
+color:#93c5fd;
+margin-bottom:4px;
 }
 
 .node{
 background:#1e293b;
-padding:10px 16px;
+padding:11px 16px;
 border-radius:12px;
 width:100%;
 text-align:center;
 font-weight:700;
 }
 
-.arrow{font-size:22px;color:#93c5fd;}
-
-.vpn-box,.firewall-box,.aws-box{
+.highlight-node{
 background:#2563eb;
-padding:10px 16px;
+padding:11px 16px;
 border-radius:12px;
 width:100%;
 text-align:center;
 font-weight:700;
 }
 
-.rule-list{
-width:100%;
-background:#0f172a;
-padding:12px;
+.blocked-node{
+background:#7f1d1d;
+border:1px solid #ef4444;
+padding:11px 16px;
 border-radius:12px;
-font-size:14px;
-line-height:1.8;
+width:100%;
+text-align:center;
+font-weight:700;
 }
 
-.small-note{font-size:14px;color:#cbd5e1;text-align:center;}
+.arrow{
+font-size:22px;
+color:#93c5fd;
+}
+
+.small-note{
+font-size:14px;
+color:#cbd5e1;
+text-align:center;
+}
+
+.doc-button{
+display:inline-block;
+margin-top:10px;
+padding:12px 18px;
+border-radius:40px;
+background:#2563eb;
+border:2px solid #2563eb;
+color:white;
+text-decoration:none;
+font-size:15px;
+font-weight:700;
+text-align:center;
+}
+
+.doc-button:hover{
+background:#1d4ed8;
+border-color:#60a5fa;
+}
 
 /* HOBBIES */
+
 .hobby-list{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -270,6 +394,7 @@ color:#d1d5db;
 }
 
 /* CONTACT */
+
 .contact-item{
 display:flex;
 align-items:center;
@@ -310,9 +435,14 @@ height:22px;
 width:22px;
 }
 
-footer{text-align:center;padding:35px;color:#94a3b8;}
+footer{
+text-align:center;
+padding:35px;
+color:#94a3b8;
+}
 
 /* TABLET */
+
 @media(max-width:1100px){
 
 nav{
@@ -332,31 +462,31 @@ gap:16px;
 }
 
 .hero{
-padding:170px 24px 50px;
+padding:190px 24px 50px;
 justify-content:center;
-text-align:left;
 gap:24px;
 }
 
-.left{max-width:60%;}
+.left{
+max-width:60%;
+}
 
 .left h1{
 font-size:36px;
 white-space:normal;
 }
 
-.left h2{font-size:21px;}
-.left p{font-size:17px;}
+.left h2{
+font-size:21px;
+}
 
-.buttons a{
-font-size:15px;
-padding:12px 18px;
-margin-right:8px;
+.left p{
+font-size:17px;
 }
 
 .profile-photo{
-width:170px;
-height:170px;
+width:190px;
+height:190px;
 }
 
 .project-card{
@@ -365,6 +495,7 @@ grid-template-columns:1fr 1fr;
 }
 
 /* MOBILE */
+
 @media(max-width:700px){
 
 nav{
@@ -377,6 +508,7 @@ border-radius:0;
 
 nav ul{
 gap:13px;
+justify-content:center;
 }
 
 .hero{
@@ -417,6 +549,7 @@ padding:28px 20px;
 
 .project-card{
 grid-template-columns:1fr;
+padding:18px;
 }
 
 .contact-item{
@@ -425,6 +558,8 @@ font-size:16px;
 
 .contact-item a{
 font-size:16px;
+white-space:normal;
+overflow-wrap:anywhere;
 }
 }
 </style>
@@ -453,14 +588,23 @@ font-size:16px;
 
 <section class="hero">
 <div class="left">
+
 <h1 id="title1">Hallo, ich bin Sangeeta</h1>
-<h2 id="title2">Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span></h2>
-<p id="desc">Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.</p>
+
+<h2 id="title2">
+Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>
+</h2>
+
+<p id="desc">
+Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support.
+Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.
+</p>
 
 <div class="buttons">
 <a href="#contact" id="btn1">Kontakt aufnehmen</a>
 <a href="#projects" id="btn2">Projekte ansehen</a>
 </div>
+
 </div>
 
 <div class="right">
@@ -470,115 +614,221 @@ font-size:16px;
 
 <section id="about">
 <div class="box">
+
 <h3 id="aboutTitle">Über mich</h3>
+
 <p id="aboutText">
-Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als 8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung, Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.
+Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für
+Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als
+8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung,
+Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern.
+Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.
 </p>
+
 </div>
 </section>
 
 <section id="skills">
 <div class="box">
+
 <h3 id="skillTitle">Kenntnisse</h3>
 
 <div class="skills-grid">
-<div class="skill-card"><h4>💻 Systemintegration</h4><p>Windows Server<br>Active Directory<br>Benutzerverwaltung<br>IT Support</p></div>
-<div class="skill-card"><h4>🌐 Netzwerk</h4><p>TCP/IP<br>DNS<br>DHCP<br>VPN</p></div>
-<div class="skill-card"><h4>☁️ Cloud & Microsoft</h4><p>Microsoft 365<br>Azure Basics<br>AWS Basics<br>Exchange Online</p></div>
-<div class="skill-card"><h4>⌨️ Scripting & Programmierung</h4><p>Java<br>PowerShell</p></div>
-<div class="skill-card"><h4>🗄️ Datenbanken</h4><p>MariaDB<br>MySQL</p></div>
-<div class="skill-card"><h4>🧑‍💼 Business & HR</h4><p>Workday<br>Prozessoptimierung<br>Reporting<br>Stakeholder Management</p></div>
+
+<div class="skill-card">
+<h4>💻 Systemintegration</h4>
+<p>
+Windows Server<br>
+Active Directory<br>
+Benutzerverwaltung<br>
+IT Support
+</p>
 </div>
 
+<div class="skill-card">
+<h4>🌐 Netzwerk</h4>
+<p>
+TCP/IP<br>
+DNS<br>
+DHCP<br>
+Switchport Security
+</p>
+</div>
+
+<div class="skill-card">
+<h4>☁️ Cloud & Microsoft</h4>
+<p>
+Microsoft 365<br>
+Azure Basics<br>
+AWS Basics<br>
+Exchange Online
+</p>
+</div>
+
+<div class="skill-card">
+<h4>⌨️ Scripting & Programmierung</h4>
+<p>
+Java<br>
+PowerShell<br>
+REST API<br>
+GitHub
+</p>
+</div>
+
+<div class="skill-card">
+<h4>🗄️ Datenbanken</h4>
+<p>
+MariaDB<br>
+MySQL<br>
+Datenbank-Grundlagen<br>
+CRUD-Operationen
+</p>
+</div>
+
+<div class="skill-card">
+<h4>🧑‍💼 Business & HR</h4>
+<p>
+Workday<br>
+Prozessoptimierung<br>
+Reporting<br>
+Stakeholder Management
+</p>
+</div>
+
+</div>
 </div>
 </section>
 
 <section id="projects">
 <div class="box">
+
 <h3 id="projectTitle">Projekte</h3>
 
 <p class="project-intro" id="projectIntro">
-Diese Projekte habe ich eigenständig geplant, umgesetzt und dokumentiert, um praktische Erfahrung in Systemintegration, Netzwerk und Cloud-Grundlagen aufzubauen.
+Diese Projekte habe ich eigenständig umgesetzt und dokumentiert, um praktische
+Erfahrung in Netzwerksicherheit, Programmierung und Systemintegration aufzubauen.
 </p>
 
 <div class="project-grid">
 
+<!-- CISCO PROJECT -->
+
 <div class="project-card">
+
 <div>
-<h4 id="p1t">🔐 OpenVPN Konfiguration</h4>
+<h4 id="p1t">🔌 Cisco Switchport Port-Security</h4>
+
 <div class="tools" id="p1tools">
-<span>Linux VM</span><span>OpenVPN</span><span>Routing</span>
+<span>Cisco Packet Tracer</span>
+<span>Switchport</span>
+<span>Port-Security</span>
+<span>MAC-Adressen</span>
 </div>
+
 <p id="p1d">
-• OpenVPN auf einer Linux VM eingerichtet<br>
-• Verbindung zwischen Host-System und VM aufgebaut<br>
-• Routing geprüft und Verbindung getestet
+• Port-Security auf Cisco Access-Ports konfiguriert<br>
+• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>
+• Maximale Anzahl verbundener Geräte eingeschränkt<br>
+• Unautorisierte Geräte durch den Shutdown-Modus blockiert
 </p>
-<div class="result" id="p1r">Ergebnis: Sichere VPN-Verbindung erfolgreich aufgebaut.</div>
+
+<div class="result" id="p1r">
+Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und
+erfolgreich getestet.
+</div>
 </div>
 
 <div class="diagram">
-<div class="node">🖥 Windows Host</div>
+<h5 id="p1diagramTitle">📄 Projektübersicht</h5>
+
+<div class="node" id="p1node1">💻 Autorisiertes Gerät</div>
+
 <div class="arrow">⬇</div>
-<div class="vpn-box">🔐 VPN Tunnel</div>
-<div class="arrow">⬇</div>
-<div class="node">🐧 Linux VM</div>
-<div class="small-note">OpenVPN Server</div>
-</div>
+
+<div class="highlight-node" id="p1node2">
+🔌 Cisco Switch mit Port-Security
 </div>
 
+<div class="arrow">⬇</div>
+
+<div class="blocked-node" id="p1node3">
+⛔ Unautorisiertes Gerät blockiert
+</div>
+
+<div class="small-note" id="p1note">
+Zugriffskontrolle über sichere MAC-Adressen
+</div>
+
+<a
+href="https://github.com/sangeeta-das-is/Cisco-port-security"
+target="_blank"
+rel="noopener noreferrer"
+class="doc-button"
+id="p1link">
+GitHub-Dokumentation ansehen
+</a>
+</div>
+
+</div>
+
+<!-- EMPLOYEE SERVICE PROJECT -->
+
 <div class="project-card">
+
 <div>
-<h4 id="p2t">🛡 Firewall Regelkonfiguration</h4>
+<h4 id="p2t">👩‍💼 Employee Service</h4>
+
 <div class="tools" id="p2tools">
-<span>Firewall</span><span>Windows Client</span><span>Webzugriff</span>
+<span>Java</span>
+<span>REST API</span>
+<span>CRUD</span>
+<span>GitHub</span>
 </div>
+
 <p id="p2d">
-• Firewall-Regeln erstellt und getestet<br>
-• HTTP-Zugriff erlaubt und andere Zugriffe eingeschränkt<br>
-• Verhalten am Windows Client geprüft
+• Employee Service zur Verwaltung von Mitarbeiterdaten erstellt<br>
+• Funktionen zum Erstellen, Anzeigen, Aktualisieren und Löschen umgesetzt<br>
+• Anwendung klar strukturiert und auf GitHub dokumentiert<br>
+• Service-Funktionen getestet
 </p>
-<div class="result" id="p2r">Ergebnis: Netzwerkzugriff kontrolliert und nachvollziehbar eingeschränkt.</div>
+
+<div class="result" id="p2r">
+Ergebnis: Ein strukturierter Service zur zuverlässigen Verwaltung von
+Mitarbeiterdaten wurde umgesetzt.
+</div>
 </div>
 
 <div class="diagram">
-<div class="node">💻 Windows Client</div>
+<h5 id="p2diagramTitle">📄 Projektübersicht</h5>
+
+<div class="node" id="p2node1">💻 Benutzer / Anwendung</div>
+
 <div class="arrow">⬇</div>
-<div class="firewall-box">🛡 Firewall</div>
-<div class="rule-list">
-<div>✔ HTTP erlaubt</div>
-<div>✖ HTTPS blockiert</div>
-<div>✔ Zugriff kontrolliert</div>
-</div>
-<div class="arrow">⬇</div>
-<div class="node">🌐 Internet</div>
-</div>
+
+<div class="highlight-node" id="p2node2">
+⚙️ Employee Service
 </div>
 
-<div class="project-card">
-<div>
-<h4 id="p3t">☁️ AWS Statische Website mit Monitoring</h4>
-<div class="tools" id="p3tools">
-<span>Amazon S3</span><span>CloudFront</span><span>CloudWatch</span><span>SNS</span>
-</div>
-<p id="p3d">
-• Statische Website mit Amazon S3 gehostet<br>
-• CloudFront für schnelle Auslieferung genutzt<br>
-• CloudWatch Monitoring und E-Mail-Alarm eingerichtet
-</p>
-<div class="result" id="p3r">Ergebnis: Website bereitgestellt und mit einfacher Überwachung abgesichert.</div>
+<div class="arrow">⬇</div>
+
+<div class="node" id="p2node3">
+🗄️ Mitarbeiterdaten
 </div>
 
-<div class="diagram">
-<div class="node">🌐 Website Besucher</div>
-<div class="arrow">⬇</div>
-<div class="aws-box">☁️ CloudFront</div>
-<div class="arrow">⬇</div>
-<div class="aws-box">🗂 Amazon S3 Website</div>
-<div class="arrow">⬇</div>
-<div class="node">📊 CloudWatch Monitoring</div>
-<div class="small-note">E-Mail Alarm bei Problemen</div>
+<div class="small-note" id="p2note">
+Erstellen · Anzeigen · Aktualisieren · Löschen
 </div>
+
+<a
+href="https://github.com/sangeeta-das-is/employee-service"
+target="_blank"
+rel="noopener noreferrer"
+class="doc-button"
+id="p2link">
+GitHub-Dokumentation ansehen
+</a>
+</div>
+
 </div>
 
 </div>
@@ -587,6 +837,7 @@ Diese Projekte habe ich eigenständig geplant, umgesetzt und dokumentiert, um pr
 
 <section id="hobbies">
 <div class="box">
+
 <h3 id="hobbyTitle">Hobbys</h3>
 
 <div class="hobby-list">
@@ -601,12 +852,33 @@ Diese Projekte habe ich eigenständig geplant, umgesetzt und dokumentiert, um pr
 
 <section id="contact">
 <div class="box">
+
 <h3 id="contactTitle">Kontakt</h3>
 
-<div class="contact-item"><span class="icon">☎</span><a href="tel:015236734519">01523-6734519</a></div>
-<div class="contact-item"><span class="icon">✉</span><a href="mailto:sangeeta-das@gmx.de">sangeeta-das@gmx.de</a></div>
-<div class="contact-item"><span class="icon">⌂</span>Düsseldorf</div>
-<div class="contact-item"><span class="icon linkedin-icon">in</span><a href="https://www.linkedin.com/in/sangeetadas2204/" target="_blank">LinkedIn</a></div>
+<div class="contact-item">
+<span class="icon">☎</span>
+<a href="tel:015236734519">01523-6734519</a>
+</div>
+
+<div class="contact-item">
+<span class="icon">✉</span>
+<a href="mailto:sangeeta-das@gmx.de">sangeeta-das@gmx.de</a>
+</div>
+
+<div class="contact-item">
+<span class="icon">⌂</span>
+Düsseldorf
+</div>
+
+<div class="contact-item">
+<span class="icon linkedin-icon">in</span>
+<a
+href="https://www.linkedin.com/in/sangeetadas2204/"
+target="_blank"
+rel="noopener noreferrer">
+LinkedIn
+</a>
+</div>
 
 </div>
 </section>
@@ -616,103 +888,202 @@ Diese Projekte habe ich eigenständig geplant, umgesetzt und dokumentiert, um pr
 <script>
 function setLanguage(lang){
 
-if(lang==="en"){
+const deBtn = document.getElementById("deBtn");
+const enBtn = document.getElementById("enBtn");
+
+if(lang === "en"){
+
+document.documentElement.lang = "en";
 
 deBtn.classList.remove("active");
 enBtn.classList.add("active");
 
-nav1.innerHTML="About";
-nav2.innerHTML="Skills";
-nav3.innerHTML="Projects";
-nav4.innerHTML="Hobbies";
-nav5.innerHTML="Contact";
+nav1.innerHTML = "About";
+nav2.innerHTML = "Skills";
+nav3.innerHTML = "Projects";
+nav4.innerHTML = "Hobbies";
+nav5.innerHTML = "Contact";
 
-title1.innerHTML="Hi, I'm Sangeeta";
-title2.innerHTML='Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
-desc.innerHTML="Focused on system integration, networking, cloud basics and IT support. Committed, reliable and motivated for continuous growth.";
+title1.innerHTML = "Hi, I'm Sangeeta";
+title2.innerHTML =
+'Aspiring IT Specialist in System Integration<span class="cursor">_</span>';
 
-btn1.innerHTML="Get In Touch";
-btn2.innerHTML="View Projects";
+desc.innerHTML =
+"Focused on system integration, networking, cloud basics and IT support. " +
+"Committed, reliable and motivated for continuous growth.";
 
-aboutTitle.innerHTML="About";
-aboutText.innerHTML="I am currently retraining as an IT Specialist in System Integration at BBQ Düsseldorf. I also bring more than 8 years of HR experience, especially in process optimization, Workday and structured collaboration with different stakeholders. I now want to apply this experience in the IT field.";
+btn1.innerHTML = "Get In Touch";
+btn2.innerHTML = "View Projects";
 
-skillTitle.innerHTML="Skills";
+aboutTitle.innerHTML = "About";
 
-projectTitle.innerHTML="Projects";
-projectIntro.innerHTML="I independently planned, implemented and documented these projects to build practical experience in system integration, networking and cloud basics.";
+aboutText.innerHTML =
+"I am currently retraining as an IT Specialist in System Integration at " +
+"BBQ Düsseldorf. I also bring more than 8 years of HR experience, especially " +
+"in process optimization, Workday and structured collaboration with different " +
+"stakeholders. I now want to apply this experience in the IT field.";
 
-p1t.innerHTML="🔐 OpenVPN Configuration";
-p1tools.innerHTML="<span>Linux VM</span><span>OpenVPN</span><span>Routing</span>";
-p1d.innerHTML="• OpenVPN configured on a Linux VM<br>• Connection built between host system and VM<br>• Routing checked and connection tested";
-p1r.innerHTML="Result: Secure VPN connection successfully established.";
+skillTitle.innerHTML = "Skills";
 
-p2t.innerHTML="🛡 Firewall Rule Configuration";
-p2tools.innerHTML="<span>Firewall</span><span>Windows Client</span><span>Web Access</span>";
-p2d.innerHTML="• Firewall rules created and tested<br>• HTTP access allowed and other access restricted<br>• Behavior checked on a Windows client";
-p2r.innerHTML="Result: Network access controlled and clearly restricted.";
+projectTitle.innerHTML = "Projects";
 
-p3t.innerHTML="☁️ AWS Static Website with Monitoring";
-p3tools.innerHTML="<span>Amazon S3</span><span>CloudFront</span><span>CloudWatch</span><span>SNS</span>";
-p3d.innerHTML="• Static website hosted with Amazon S3<br>• CloudFront used for fast delivery<br>• CloudWatch monitoring and email alert configured";
-p3r.innerHTML="Result: Website deployed and protected with simple monitoring.";
+projectIntro.innerHTML =
+"I independently implemented and documented these projects to build practical " +
+"experience in network security, programming and system integration.";
 
-hobbyTitle.innerHTML="Hobbies";
-h1.innerHTML="📈 Personal Development";
-h2.innerHTML="📚 Reading Books";
-h3.innerHTML="💃 Classical Dance";
-h4.innerHTML="🍲 Learning International Recipes";
+p1t.innerHTML = "🔌 Cisco Switchport Port Security";
 
-contactTitle.innerHTML="Contact";
+p1tools.innerHTML =
+"<span>Cisco Packet Tracer</span>" +
+"<span>Switchport</span>" +
+"<span>Port Security</span>" +
+"<span>MAC Addresses</span>";
+
+p1d.innerHTML =
+"• Port security configured on Cisco access ports<br>" +
+"• Allowed MAC addresses assigned to specific devices<br>" +
+"• Maximum number of connected devices restricted<br>" +
+"• Unauthorized devices blocked using shutdown mode";
+
+p1r.innerHTML =
+"Result: Network access was restricted to authorized devices and successfully tested.";
+
+p1diagramTitle.innerHTML = "📄 Project Overview";
+p1node1.innerHTML = "💻 Authorized Device";
+p1node2.innerHTML = "🔌 Cisco Switch with Port Security";
+p1node3.innerHTML = "⛔ Unauthorized Device Blocked";
+p1note.innerHTML = "Access control using secure MAC addresses";
+p1link.innerHTML = "View GitHub Documentation";
+
+p2t.innerHTML = "👩‍💼 Employee Service";
+
+p2tools.innerHTML =
+"<span>Java</span>" +
+"<span>REST API</span>" +
+"<span>CRUD</span>" +
+"<span>GitHub</span>";
+
+p2d.innerHTML =
+"• Employee service created to manage employee data<br>" +
+"• Create, view, update and delete functions implemented<br>" +
+"• Application clearly structured and documented on GitHub<br>" +
+"• Service functions tested";
+
+p2r.innerHTML =
+"Result: A structured service for reliably managing employee data was implemented.";
+
+p2diagramTitle.innerHTML = "📄 Project Overview";
+p2node1.innerHTML = "💻 User / Application";
+p2node2.innerHTML = "⚙️ Employee Service";
+p2node3.innerHTML = "🗄️ Employee Data";
+p2note.innerHTML = "Create · View · Update · Delete";
+p2link.innerHTML = "View GitHub Documentation";
+
+hobbyTitle.innerHTML = "Hobbies";
+h1.innerHTML = "📈 Personal Development";
+h2.innerHTML = "📚 Reading Books";
+h3.innerHTML = "💃 Classical Dance";
+h4.innerHTML = "🍲 Learning International Recipes";
+
+contactTitle.innerHTML = "Contact";
 
 }else{
+
+document.documentElement.lang = "de";
 
 deBtn.classList.add("active");
 enBtn.classList.remove("active");
 
-nav1.innerHTML="Über mich";
-nav2.innerHTML="Kenntnisse";
-nav3.innerHTML="Projekte";
-nav4.innerHTML="Hobbys";
-nav5.innerHTML="Kontakt";
+nav1.innerHTML = "Über mich";
+nav2.innerHTML = "Kenntnisse";
+nav3.innerHTML = "Projekte";
+nav4.innerHTML = "Hobbys";
+nav5.innerHTML = "Kontakt";
 
-title1.innerHTML="Hallo, ich bin Sangeeta";
-title2.innerHTML='Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
-desc.innerHTML="Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.";
+title1.innerHTML = "Hallo, ich bin Sangeeta";
 
-btn1.innerHTML="Kontakt aufnehmen";
-btn2.innerHTML="Projekte ansehen";
+title2.innerHTML =
+'Angehende Fachinformatikerin für Systemintegration<span class="cursor">_</span>';
 
-aboutTitle.innerHTML="Über mich";
-aboutText.innerHTML="Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als 8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung, Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.";
+desc.innerHTML =
+"Fokus auf Systemintegration, Netzwerke, Cloud-Grundlagen und IT-Support. " +
+"Engagiert, zuverlässig und motiviert zur kontinuierlichen Weiterentwicklung.";
 
-skillTitle.innerHTML="Kenntnisse";
+btn1.innerHTML = "Kontakt aufnehmen";
+btn2.innerHTML = "Projekte ansehen";
 
-projectTitle.innerHTML="Projekte";
-projectIntro.innerHTML="Diese Projekte habe ich eigenständig geplant, umgesetzt und dokumentiert, um praktische Erfahrung in Systemintegration, Netzwerk und Cloud-Grundlagen aufzubauen.";
+aboutTitle.innerHTML = "Über mich";
 
-p1t.innerHTML="🔐 OpenVPN Konfiguration";
-p1tools.innerHTML="<span>Linux VM</span><span>OpenVPN</span><span>Routing</span>";
-p1d.innerHTML="• OpenVPN auf einer Linux VM eingerichtet<br>• Verbindung zwischen Host-System und VM aufgebaut<br>• Routing geprüft und Verbindung getestet";
-p1r.innerHTML="Ergebnis: Sichere VPN-Verbindung erfolgreich aufgebaut.";
+aboutText.innerHTML =
+"Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für " +
+"Systemintegration bei BBQ Düsseldorf. Zusätzlich bringe ich mehr als " +
+"8 Jahre Berufserfahrung im HR-Bereich mit, besonders in Prozessoptimierung, " +
+"Workday und strukturierter Zusammenarbeit mit verschiedenen Stakeholdern. " +
+"Diese Erfahrung möchte ich nun gezielt im IT-Bereich einsetzen.";
 
-p2t.innerHTML="🛡 Firewall Regelkonfiguration";
-p2tools.innerHTML="<span>Firewall</span><span>Windows Client</span><span>Webzugriff</span>";
-p2d.innerHTML="• Firewall-Regeln erstellt und getestet<br>• HTTP-Zugriff erlaubt und andere Zugriffe eingeschränkt<br>• Verhalten am Windows Client geprüft";
-p2r.innerHTML="Ergebnis: Netzwerkzugriff kontrolliert und nachvollziehbar eingeschränkt.";
+skillTitle.innerHTML = "Kenntnisse";
 
-p3t.innerHTML="☁️ AWS Statische Website mit Monitoring";
-p3tools.innerHTML="<span>Amazon S3</span><span>CloudFront</span><span>CloudWatch</span><span>SNS</span>";
-p3d.innerHTML="• Statische Website mit Amazon S3 gehostet<br>• CloudFront für schnelle Auslieferung genutzt<br>• CloudWatch Monitoring und E-Mail-Alarm eingerichtet";
-p3r.innerHTML="Ergebnis: Website bereitgestellt und mit einfacher Überwachung abgesichert.";
+projectTitle.innerHTML = "Projekte";
 
-hobbyTitle.innerHTML="Hobbys";
-h1.innerHTML="📈 Persönliche Weiterentwicklung";
-h2.innerHTML="📚 Bücher lesen";
-h3.innerHTML="💃 Klassischer Tanz";
-h4.innerHTML="🍲 Internationale Rezepte lernen";
+projectIntro.innerHTML =
+"Diese Projekte habe ich eigenständig umgesetzt und dokumentiert, um praktische " +
+"Erfahrung in Netzwerksicherheit, Programmierung und Systemintegration aufzubauen.";
 
-contactTitle.innerHTML="Kontakt";
+p1t.innerHTML = "🔌 Cisco Switchport Port-Security";
+
+p1tools.innerHTML =
+"<span>Cisco Packet Tracer</span>" +
+"<span>Switchport</span>" +
+"<span>Port-Security</span>" +
+"<span>MAC-Adressen</span>";
+
+p1d.innerHTML =
+"• Port-Security auf Cisco Access-Ports konfiguriert<br>" +
+"• Erlaubte MAC-Adressen für bestimmte Geräte festgelegt<br>" +
+"• Maximale Anzahl verbundener Geräte eingeschränkt<br>" +
+"• Unautorisierte Geräte durch den Shutdown-Modus blockiert";
+
+p1r.innerHTML =
+"Ergebnis: Der Netzwerkzugriff wurde auf autorisierte Geräte beschränkt und erfolgreich getestet.";
+
+p1diagramTitle.innerHTML = "📄 Projektübersicht";
+p1node1.innerHTML = "💻 Autorisiertes Gerät";
+p1node2.innerHTML = "🔌 Cisco Switch mit Port-Security";
+p1node3.innerHTML = "⛔ Unautorisiertes Gerät blockiert";
+p1note.innerHTML = "Zugriffskontrolle über sichere MAC-Adressen";
+p1link.innerHTML = "GitHub-Dokumentation ansehen";
+
+p2t.innerHTML = "👩‍💼 Employee Service";
+
+p2tools.innerHTML =
+"<span>Java</span>" +
+"<span>REST API</span>" +
+"<span>CRUD</span>" +
+"<span>GitHub</span>";
+
+p2d.innerHTML =
+"• Employee Service zur Verwaltung von Mitarbeiterdaten erstellt<br>" +
+"• Funktionen zum Erstellen, Anzeigen, Aktualisieren und Löschen umgesetzt<br>" +
+"• Anwendung klar strukturiert und auf GitHub dokumentiert<br>" +
+"• Service-Funktionen getestet";
+
+p2r.innerHTML =
+"Ergebnis: Ein strukturierter Service zur zuverlässigen Verwaltung von Mitarbeiterdaten wurde umgesetzt.";
+
+p2diagramTitle.innerHTML = "📄 Projektübersicht";
+p2node1.innerHTML = "💻 Benutzer / Anwendung";
+p2node2.innerHTML = "⚙️ Employee Service";
+p2node3.innerHTML = "🗄️ Mitarbeiterdaten";
+p2note.innerHTML = "Erstellen · Anzeigen · Aktualisieren · Löschen";
+p2link.innerHTML = "GitHub-Dokumentation ansehen";
+
+hobbyTitle.innerHTML = "Hobbys";
+h1.innerHTML = "📈 Persönliche Weiterentwicklung";
+h2.innerHTML = "📚 Bücher lesen";
+h3.innerHTML = "💃 Klassischer Tanz";
+h4.innerHTML = "🍲 Internationale Rezepte lernen";
+
+contactTitle.innerHTML = "Kontakt";
 }
 }
 </script>
